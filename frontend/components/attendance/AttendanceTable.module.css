@@ -1,0 +1,199 @@
+/* components/attendance/AttendanceTable.module.css */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tableTitle {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.tableActions {
+  display: flex;
+  gap: 10px;
+}
+
+.tableBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
+.tableBtn.export {
+  background: #4caf50;
+  color: white;
+}
+
+.tableBtn.print {
+  background: #2196f3;
+  color: white;
+}
+
+.tableBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.searchBar {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 12px 20px 12px 45px;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  font-size: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%237f8c8d' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #4facfe;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background: #f8f9fa;
+}
+
+.table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 600;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.table td {
+  padding: 15px;
+  font-size: 14px;
+  color: #2c3e50;
+  border-bottom: 1px solid #ecf0f1;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.studentInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.studentAvatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.studentName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 3px;
+}
+
+.studentEmail {
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.percentageBar {
+  width: 80px;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.percentageFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.actionIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  transition: transform 0.2s;
+  margin-right: 5px;
+}
+
+.actionIcon:hover {
+  transform: scale(1.2);
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .tableHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+  }
+
+  .studentInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

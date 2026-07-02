@@ -1,0 +1,87 @@
+/* components/lecturer/AlertsList.module.css */
+
+.section {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.cardBody {
+  padding: 0;
+}
+
+.alertWrapper {
+  padding: 15px 20px;
+}
+
+.alertWrapper:not(:last-child) {
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.alert {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alertContent {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.alertIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.alertText {
+  flex: 1;
+}
+
+.alertTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.alertMessage {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.alert.alert-danger {
+  color: #721c24;
+}
+
+.alert.alert-danger .alertTitle {
+  color: #721c24;
+}
+
+.alert.alert-warning {
+  color: #856404;
+}
+
+.alert.alert-warning .alertTitle {
+  color: #856404;
+}
+
+.alert.alert-info {
+  color: #0c5460;
+}
+
+.alert.alert-info .alertTitle {
+  color: #0c5460;
+}

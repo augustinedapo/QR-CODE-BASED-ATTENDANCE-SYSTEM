@@ -1,0 +1,82 @@
+/* components/lecturer/LecturerDashboard.module.css */
+
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.welcomeSection {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.welcomeTitle {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.welcomeSubtitle {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 0;
+}
+
+.quickActionsSection {
+  margin: 30px 0;
+}
+
+.actionBtn {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.actionBtn.primary {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.actionBtn.secondary {
+  background: white;
+  color: #2c3e50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .welcomeSection {
+    padding: 20px;
+  }
+
+  .welcomeTitle {
+    font-size: 22px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 14px;
+  }
+}

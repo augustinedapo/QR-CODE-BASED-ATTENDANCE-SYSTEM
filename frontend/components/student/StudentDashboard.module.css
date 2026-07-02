@@ -1,0 +1,61 @@
+/* components/student/StudentDashboard.module.css */
+
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.welcomeSection {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.welcomeTitle {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.welcomeSubtitle {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 0;
+}
+
+.coursesSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px 0;
+  }
+
+  .welcomeSection {
+    padding: 20px;
+  }
+
+  .welcomeTitle {
+    font-size: 22px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 14px;
+  }
+}

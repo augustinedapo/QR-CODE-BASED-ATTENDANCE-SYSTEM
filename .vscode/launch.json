@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Django Backend",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\Backend\\manage.py",
+      "args": ["runserver"],
+      "django": true,
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+      "console": "integratedTerminal"
+    }
+  ]
+}

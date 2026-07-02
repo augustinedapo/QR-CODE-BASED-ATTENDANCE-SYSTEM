@@ -1,0 +1,37 @@
+INFO 2026-06-13 00:14:04,117 autoreload 42412 38900 Watching for file changes with StatReloader
+WARNING 2026-06-13 00:14:23,063 log 42412 13864 Not Found: /
+WARNING 2026-06-13 00:14:23,064 basehttp 42412 13864 "GET / HTTP/1.1" 404 2845
+WARNING 2026-06-13 00:14:23,914 log 42412 13864 Not Found: /favicon.ico
+WARNING 2026-06-13 00:14:23,916 basehttp 42412 13864 "GET /favicon.ico HTTP/1.1" 404 2896
+WARNING 2026-06-13 00:18:03,421 log 42412 41596 Not Found: /
+WARNING 2026-06-13 00:18:03,426 basehttp 42412 41596 "GET / HTTP/1.1" 404 2845
+WARNING 2026-06-13 00:18:06,160 log 42412 41596 Not Found: /favicon.ico
+WARNING 2026-06-13 00:18:06,161 basehttp 42412 41596 "GET /favicon.ico HTTP/1.1" 404 2896
+WARNING 2026-06-13 00:18:56,418 log 42412 48068 Bad Request: /api/auth/login/
+WARNING 2026-06-13 00:18:56,421 basehttp 42412 48068 "POST /api/auth/login/ HTTP/1.1" 400 79
+WARNING 2026-06-13 00:19:12,708 log 42412 43756 Bad Request: /api/auth/login/
+WARNING 2026-06-13 00:19:12,712 basehttp 42412 43756 "POST /api/auth/login/ HTTP/1.1" 400 79
+WARNING 2026-06-13 00:19:19,527 log 42412 27012 Bad Request: /api/auth/login/
+WARNING 2026-06-13 00:19:19,530 basehttp 42412 27012 "POST /api/auth/login/ HTTP/1.1" 400 79
+INFO 2026-06-15 08:49:15,098 autoreload 42412 38900 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-06-15 08:49:19,147 autoreload 45000 44776 Watching for file changes with StatReloader
+INFO 2026-06-15 08:54:18,840 autoreload 45000 44776 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-06-15 08:54:22,301 autoreload 40500 35608 Watching for file changes with StatReloader
+INFO 2026-06-26 13:31:34,967 autoreload 36816 34156 Watching for file changes with StatReloader
+WARNING 2026-06-26 13:32:41,454 log 36816 6660 Unauthorized: /api/
+WARNING 2026-06-26 13:32:41,462 basehttp 36816 6660 "GET /api/ HTTP/1.1" 401 58
+INFO 2026-06-26 13:36:30,843 autoreload 36816 34156 C:\Users\HP\QR_Attendance_App\Backend\accounts\models.py changed, reloading.
+INFO 2026-06-26 13:36:32,767 autoreload 16328 2000 Watching for file changes with StatReloader
+INFO 2026-06-26 13:37:12,701 autoreload 23352 16800 Watching for file changes with StatReloader
+WARNING 2026-06-26 13:37:38,543 log 16328 1304 Not Found: /
+WARNING 2026-06-26 13:37:38,553 basehttp 16328 1304 "GET / HTTP/1.1" 404 2845
+WARNING 2026-06-26 13:37:41,176 log 16328 1304 Not Found: /favicon.ico
+WARNING 2026-06-26 13:37:41,186 basehttp 16328 1304 "GET /favicon.ico HTTP/1.1" 404 2896
+WARNING 2026-06-26 21:00:02,145 log 16328 38416 Not Found: /
+WARNING 2026-06-26 21:00:02,161 basehttp 16328 38416 "GET / HTTP/1.1" 404 2845
+INFO 2026-06-29 08:21:51,239 autoreload 6668 40832 Watching for file changes with StatReloader
+WARNING 2026-06-29 08:23:06,938 log 23352 32000 Not Found: /
+WARNING 2026-06-29 08:23:06,991 basehttp 23352 32000 "GET / HTTP/1.1" 404 2845
+INFO 2026-06-30 10:28:47,011 autoreload 27732 38224 Watching for file changes with StatReloader
+WARNING 2026-06-30 10:29:23,871 log 23352 32228 Not Found: /
+WARNING 2026-06-30 10:29:23,886 basehttp 23352 32228 "GET / HTTP/1.1" 404 2845

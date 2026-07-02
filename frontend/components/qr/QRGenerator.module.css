@@ -1,0 +1,134 @@
+/* components/qr/QRGenerator.module.css */
+
+.generator {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.headerSection {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 0;
+}
+
+.placeholder {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.placeholderContent {
+  width: 100%;
+}
+
+.icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.placeholder h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.placeholder p {
+  color: #7f8c8d;
+  margin-bottom: 0;
+}
+
+.instructionsSection {
+  margin-top: 60px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.instructionsSection h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.instructionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instructionStep {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.stepContent h4 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.stepContent p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .generator {
+    padding: 20px 0;
+  }
+
+  .instructionStep {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stepNumber {
+    order: -1;
+  }
+}

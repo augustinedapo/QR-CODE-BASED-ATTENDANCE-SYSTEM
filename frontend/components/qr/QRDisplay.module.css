@@ -1,0 +1,175 @@
+/* components/qr/QRDisplay.module.css */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: sticky;
+  top: 20px;
+}
+
+.title {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.qrContainer {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrPlaceholder {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.qrPlaceholder.expired {
+  background: #ffebee;
+}
+
+.qrCode {
+  display: block;
+  margin: 0 auto;
+}
+
+.expiredMessage {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.expiredIcon {
+  font-size: 80px;
+  color: #f44336;
+  margin-bottom: 15px;
+}
+
+.expiredMessage p {
+  font-size: 18px;
+  color: #f44336;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.qrInfo {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.timerDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f093fb;
+}
+
+.timerDisplay.expired {
+  color: #f44336;
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.actionBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.actionBtn.primary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.actionBtn.secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.actionBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.actionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .card {
+    position: static;
+  }
+
+  .actionButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.5cm;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .actionButtons {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+}

@@ -1,47 +1,54 @@
-/* components/student/StudentAttendanceStats.module.css */
-
 .statCard {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  background: white;
+  min-height: 160px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .statCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .statCard.bg-blue {
-  border-left: 5px solid #2196f3;
+  border-top: 4px solid var(--color-primary);
 }
 
 .statCard.bg-green {
-  border-left: 5px solid #4caf50;
+  border-top: 4px solid var(--color-success);
 }
 
 .statCard.bg-orange {
-  border-left: 5px solid #ff9800;
+  border-top: 4px solid var(--color-accent);
 }
 
 .statCard.bg-purple {
-  border-left: 5px solid #9c27b0;
+  border-top: 4px solid var(--color-secondary);
 }
 
 .statIcon {
-  font-size: 32px;
-  margin-bottom: 15px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 
 .statValue {
-  font-size: 28px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 5px;
+  color: var(--color-text);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
 .statLabel {
+  color: var(--color-text-muted);
   font-size: 14px;
-  color: #7f8c8d;
+  font-weight: 700;
 }

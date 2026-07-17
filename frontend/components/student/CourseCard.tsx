@@ -3,25 +3,32 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Card, ProgressBar } from 'react-bootstrap';
-import { Course, Enrollment } from '@/types/index';
+import { ArrowRight, UserRound } from 'lucide-react';
+import { Course, Enrollment, StudentCourseAttendanceSummary } from '@/types/index';
 import { getMockData } from '@/utils/mockData';
 import styles from './CourseCard.module.css';
 
 interface CourseCardProps {
   course: Course;
   enrollment: Enrollment;
+  summary?: StudentCourseAttendanceSummary;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ course, enrollment }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ course, summary }) => {
   const attendances = getMockData.getAttendances();
   
   // Calculate attendance percentage for this course
   const courseAttendances = attendances.length;
   const totalLectures = course.total_lectures || 25;
-  const percentage = totalLectures > 0 
+  const fallbackPercentage = totalLectures > 0 
     ? Math.round((courseAttendances / totalLectures) * 100) 
     : 0;
+  const percentage = summary?.percentage ?? fallbackPercentage;
+  const attended = summary?.attended ?? courseAttendances;
+  const lectureTotal = summary?.total_lectures ?? totalLectures;
+  const lateCount = summary?.late ?? 0;
 
   const getStatusBadge = (percentage: number) => {
     if (percentage >= 90) return { text: 'Excellent', color: 'success' };
@@ -40,7 +47,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, enrollment }) => {
             <h5 className={styles.courseName}>{course.course_name}</h5>
             <p className={styles.courseCode}>{course.course_code}</p>
             <p className={styles.lecturer}>
-              👨‍🏫 {course.lecturer?.first_name} {course.lecturer?.last_name}
+              <UserRound size={14} aria-hidden="true" /> {course.lecturer?.first_name} {course.lecturer?.last_name}
             </p>
           </div>
           <div className={`badge bg-${status.color} ${styles.badge}`}>
@@ -52,7 +59,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, enrollment }) => {
           <div className={styles.stat}>
             <span className={styles.statLabel}>Classes</span>
             <span className={styles.statValue}>
-              {courseAttendances}/{totalLectures}
+              {attended}/{lectureTotal}
             </span>
           </div>
           <div className={styles.stat}>
@@ -60,8 +67,8 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, enrollment }) => {
             <span className={styles.statValue}>{percentage}%</span>
           </div>
           <div className={styles.stat}>
-            <span className={styles.statLabel}>Score</span>
-            <span className={styles.statValue}>4.5/5</span>
+            <span className={styles.statLabel}>Late</span>
+            <span className={styles.statValue}>{lateCount}</span>
           </div>
         </div>
 
@@ -73,7 +80,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, enrollment }) => {
           />
         </div>
 
-        <button className={styles.viewBtn}>View Details →</button>
+        <Link className={styles.viewBtn} href={`/courses/${course.course_id}`}>
+          View Details <ArrowRight size={16} aria-hidden="true" />
+        </Link>
       </Card.Body>
     </Card>
   );

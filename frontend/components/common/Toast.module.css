@@ -1,23 +1,24 @@
-/* components/common/Toast.module.css */
-
 .toast {
   position: fixed;
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 16px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  animation: slideIn 0.3s ease-in-out;
+  gap: 14px;
   max-width: 400px;
+  padding: 15px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+  box-shadow: var(--shadow-md);
   z-index: 9999;
+  animation: slideIn 220ms ease-out;
 }
 
 @keyframes slideIn {
   from {
-    transform: translateX(400px);
+    transform: translateX(26px);
     opacity: 0;
   }
   to {
@@ -27,58 +28,70 @@
 }
 
 .toast.success {
-  background: #d4edda;
-  color: #155724;
-  border-left: 4px solid #28a745;
+  border-left: 4px solid var(--color-success);
 }
 
 .toast.error {
-  background: #f8d7da;
-  color: #721c24;
-  border-left: 4px solid #dc3545;
+  border-left: 4px solid var(--color-danger);
 }
 
 .toast.warning {
-  background: #fff3cd;
-  color: #856404;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid var(--color-warning);
 }
 
 .toast.info {
-  background: #d1ecf1;
-  color: #0c5460;
-  border-left: 4px solid #17a2b8;
+  border-left: 4px solid var(--color-info);
 }
 
 .icon {
-  font-weight: bold;
   font-size: 18px;
+  font-weight: 850;
+}
+
+.success .icon {
+  color: var(--color-success);
+}
+
+.error .icon {
+  color: var(--color-danger);
+}
+
+.warning .icon {
+  color: var(--color-warning);
+}
+
+.info .icon {
+  color: var(--color-info);
 }
 
 .message {
   flex: 1;
   font-size: 14px;
+  font-weight: 650;
 }
 
 .close {
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-muted);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  opacity: 0.7;
-  transition: opacity 0.2s;
 }
 
 .close:hover {
-  opacity: 1;
+  color: var(--color-text);
+  background: var(--color-primary-soft);
 }
 
 @media (max-width: 768px) {
   .toast {
-    bottom: 10px;
     right: 10px;
+    bottom: 10px;
     left: 10px;
     max-width: none;
   }

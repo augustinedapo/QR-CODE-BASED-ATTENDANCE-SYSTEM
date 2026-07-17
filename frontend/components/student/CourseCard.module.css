@@ -1,60 +1,62 @@
-/* components/student/CourseCard.module.css */
-
 .card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: white;
-  border-left: 4px solid #667eea;
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-secondary);
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
 .cardHeader {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  margin-bottom: 15px;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
 }
 
 .courseName {
+  color: var(--color-text);
   font-size: 16px;
-  font-weight: 600;
-  color: #2c3e50;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 
 .courseCode {
+  color: var(--color-primary);
   font-size: 13px;
-  color: #7f8c8d;
-  margin-bottom: 5px;
+  font-weight: 850;
+  margin-bottom: 6px;
 }
 
 .lecturer {
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 12px;
-  color: #95a5a6;
   margin-bottom: 0;
 }
 
 .badge {
-  padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 999px;
   font-size: 12px;
   white-space: nowrap;
 }
 
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  margin-bottom: 15px;
-  padding: 10px 0;
-  border-top: 1px solid #ecf0f1;
-  border-bottom: 1px solid #ecf0f1;
+  margin-bottom: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .stat {
@@ -63,36 +65,42 @@
 
 .statLabel {
   display: block;
+  color: var(--color-text-muted);
   font-size: 12px;
-  color: #7f8c8d;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
 .statValue {
   display: block;
+  color: var(--color-text);
   font-size: 18px;
-  font-weight: bold;
-  color: #2c3e50;
+  font-weight: 850;
 }
 
 .progressSection {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .viewBtn {
   width: 100%;
+  min-height: 44px;
   padding: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+  border-radius: var(--radius-sm);
   font-size: 14px;
-  font-weight: 600;
-  transition: transform 0.2s;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
 }
 
 .viewBtn:hover {
   transform: translateY(-2px);
-  color: white;
+  background: var(--color-primary);
+  color: #ffffff;
 }

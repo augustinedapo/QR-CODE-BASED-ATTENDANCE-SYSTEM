@@ -1,69 +1,72 @@
-/* components/student/QuickActions.module.css */
-
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   margin-bottom: 30px;
 }
 
 .title {
+  color: var(--color-text);
   font-size: 18px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .actionBtn {
+  width: 100%;
+  min-height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: 750;
 }
 
 .actionBtn.primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .actionBtn.secondary {
-  background: #ecf0f1;
-  color: #2c3e50;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
 }
 
 .actionBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .icon {
-  font-size: 32px;
-  margin-bottom: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.primary .icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .label {
   font-size: 14px;
-  font-weight: 600;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .actionBtn {
-    padding: 15px;
-  }
-
-  .icon {
-    font-size: 24px;
-  }
-
-  .label {
-    font-size: 12px;
+    min-height: 92px;
+    padding: 14px;
   }
 }

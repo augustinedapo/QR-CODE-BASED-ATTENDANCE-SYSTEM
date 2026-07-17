@@ -1,21 +1,19 @@
-/* components/lecturer/AlertsList.module.css */
-
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .title {
+  color: var(--color-text);
   font-size: 22px;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .cardBody {
@@ -23,28 +21,35 @@
 }
 
 .alertWrapper {
-  padding: 15px 20px;
+  padding: 16px 20px;
 }
 
 .alertWrapper:not(:last-child) {
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .alert {
   border: none;
   padding: 0;
   margin: 0;
+  background: transparent;
 }
 
 .alertContent {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   align-items: flex-start;
 }
 
 .alertIcon {
-  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  background: var(--color-muted);
 }
 
 .alertText {
@@ -52,36 +57,28 @@
 }
 
 .alertTitle {
+  color: var(--color-text);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 
 .alertMessage {
+  color: var(--color-text-muted);
   font-size: 13px;
-  margin-bottom: 0;
 }
 
-.alert.alert-danger {
-  color: #721c24;
-}
-
+.alert.alert-danger .alertIcon,
 .alert.alert-danger .alertTitle {
-  color: #721c24;
+  color: var(--color-danger);
 }
 
-.alert.alert-warning {
-  color: #856404;
-}
-
+.alert.alert-warning .alertIcon,
 .alert.alert-warning .alertTitle {
-  color: #856404;
+  color: var(--color-warning);
 }
 
-.alert.alert-info {
-  color: #0c5460;
-}
-
+.alert.alert-info .alertIcon,
 .alert.alert-info .alertTitle {
-  color: #0c5460;
+  color: var(--color-info);
 }

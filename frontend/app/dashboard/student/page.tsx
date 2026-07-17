@@ -14,10 +14,19 @@ export default function StudentDashboardPage() {
   const router = useRouter();
 
   React.useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      router.push('/login');
+    if (isLoading) {
+      return;
     }
-  }, [isLoading, isAuthenticated, router]);
+
+    if (!isAuthenticated) {
+      router.push('/login');
+      return;
+    }
+
+    if (user?.role === 'lecturer') {
+      router.push('/dashboard/lecturer');
+    }
+  }, [isLoading, isAuthenticated, router, user]);
 
   if (isLoading) {
     return <LoadingSpinner fullScreen />;

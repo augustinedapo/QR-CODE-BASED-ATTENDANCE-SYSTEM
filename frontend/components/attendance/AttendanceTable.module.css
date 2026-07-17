@@ -1,26 +1,24 @@
-/* components/attendance/AttendanceTable.module.css */
-
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .tableHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
   gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
 }
 
 .tableTitle {
+  color: var(--color-text);
   font-size: 18px;
-  color: #2c3e50;
+  font-weight: 850;
   margin-bottom: 0;
-  font-weight: 600;
 }
 
 .tableActions {
@@ -29,82 +27,94 @@
 }
 
 .tableBtn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   font-size: 13px;
+  font-weight: 750;
   display: flex;
   align-items: center;
-  gap: 5px;
-  transition: all 0.3s;
+  gap: 7px;
 }
 
 .tableBtn.export {
-  background: #4caf50;
-  color: white;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .tableBtn.print {
-  background: #2196f3;
-  color: white;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
 }
 
 .tableBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .searchBar {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .searchInput {
-  padding: 12px 20px 12px 45px;
-  border: 2px solid #ecf0f1;
-  border-radius: 8px;
-  font-size: 14px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%237f8c8d' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+  min-height: 46px;
+  padding-left: 44px;
+  background-color: var(--color-surface-solid);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23607086' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 15px center;
 }
 
-.searchInput:focus {
-  outline: none;
-  border-color: #4facfe;
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
 }
 
 .tableWrapper {
   overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
 }
 
 .table {
   margin-bottom: 0;
-}
-
-.table thead {
-  background: #f8f9fa;
+  --bs-table-bg: var(--color-surface-solid);
+  --bs-table-color: var(--color-text);
+  --bs-table-hover-bg: var(--color-primary-soft);
+  --bs-table-hover-color: var(--color-text);
+  color: var(--color-text);
 }
 
 .table th {
-  padding: 15px;
-  text-align: left;
-  font-size: 14px;
-  color: #2c3e50;
-  font-weight: 600;
-  border-bottom: 2px solid #ecf0f1;
+  padding: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 850;
+  white-space: nowrap;
 }
 
 .table td {
-  padding: 15px;
+  padding: 14px;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
   font-size: 14px;
-  color: #2c3e50;
-  border-bottom: 1px solid #ecf0f1;
+  font-weight: 650;
   vertical-align: middle;
 }
 
 .table tbody tr:hover {
-  background: #f8f9fa;
+  background: var(--color-primary-soft);
+}
+
+.table tbody tr:hover td {
+  background: var(--color-primary-soft);
+  color: var(--color-text);
 }
 
 .studentInfo {
@@ -116,56 +126,60 @@
 .studentAvatar {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: var(--color-primary-soft);
   border-radius: 50%;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
+  font-weight: 850;
   flex-shrink: 0;
 }
 
 .studentName {
+  color: var(--color-text);
   font-size: 15px;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 3px;
+  font-weight: 800;
+  margin-bottom: 2px;
 }
 
 .studentEmail {
+  color: var(--color-text-muted);
   font-size: 13px;
-  color: #7f8c8d;
 }
 
 .percentageBar {
-  width: 80px;
+  width: 84px;
   height: 8px;
-  background: #ecf0f1;
-  border-radius: 4px;
+  background: var(--color-muted);
+  border-radius: 999px;
   overflow: hidden;
   margin-bottom: 5px;
-  display: inline-block;
 }
 
 .percentageFill {
   height: 100%;
-  border-radius: 4px;
-  transition: width 0.3s;
+  border-radius: 999px;
+  transition: width 220ms ease;
 }
 
 .actionIcon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 5px;
-  transition: transform 0.2s;
-  margin-right: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
 }
 
 .actionIcon:hover {
-  transform: scale(1.2);
+  color: #ffffff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .paginationContainer {
@@ -174,26 +188,26 @@
   align-items: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ecf0f1;
+  border-top: 1px solid var(--color-border);
 }
 
 @media (max-width: 768px) {
   .tableHeader {
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
   }
 
-  .table {
-    font-size: 12px;
+  .tableActions {
+    width: 100%;
+  }
+
+  .tableBtn {
+    flex: 1;
+    justify-content: center;
   }
 
   .table th,
   .table td {
     padding: 10px;
-  }
-
-  .studentInfo {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

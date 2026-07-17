@@ -1,0 +1,134 @@
+.registerContainer {
+  min-height: 100vh;
+  background: var(--page-gradient);
+  display: flex;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.storyPanel {
+  color: var(--color-text);
+  padding: 28px;
+}
+
+.storyBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.storyPanel h1 {
+  max-width: 560px;
+  font-size: 42px;
+  line-height: 1.08;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.storyPanel p {
+  max-width: 530px;
+  color: var(--color-text-muted);
+  font-size: 17px;
+  margin-bottom: 26px;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
+  box-shadow: var(--shadow-md);
+}
+
+.logoSection {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  border-radius: 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.roleToggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.roleButton {
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.roleButton.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.submitBtn {
+  width: 100%;
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .registerContainer {
+    padding: 18px 0;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+}

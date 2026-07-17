@@ -5,7 +5,7 @@ import { User, Course, Lecture, Attendance, Enrollment, AttendanceRecord } from 
 // Mock authenticated user
 export const mockCurrentUser: User = {
   user_id: 1,
-  email: 'john.doe@university.edu',
+  email: 'ajohnson@futa.edu.ng',
   first_name: 'John',
   last_name: 'Doe',
   role: 'student',
@@ -14,48 +14,84 @@ export const mockCurrentUser: User = {
 
 export const mockLecturerUser: User = {
   user_id: 2,
-  email: 'dr.sarah@university.edu',
-  first_name: 'Dr. Sarah',
-  last_name: 'Johnson',
+  email: 'ogunti@futa.edu.ng',
+  first_name: 'Prof. E.O',
+  last_name: 'Ogunti',
   role: 'lecturer',
-  avatar: 'SJ'
+  avatar: 'EO'
+};
+
+export const mockLecturerDahunsi: User = {
+  user_id: 3,
+  email: 'dahunsi@futa.edu.ng',
+  first_name: 'Prof. F.M',
+  last_name: 'Dahunsi',
+  role: 'lecturer',
+  avatar: 'FD'
+};
+
+export const mockLecturerOdeyemi: User = {
+  user_id: 4,
+  email: 'odeyemi@futa.edu.ng',
+  first_name: 'Dr.',
+  last_name: 'Odeyemi',
+  role: 'lecturer',
+  avatar: 'DO'
+};
+
+export const mockLecturerApena: User = {
+  user_id: 5,
+  email: 'apena@futa.edu.ng',
+  first_name: 'Prof. W.O',
+  last_name: 'Apena',
+  role: 'lecturer',
+  avatar: 'WA'
+};
+
+export const mockLecturerAdedokun: User = {
+  user_id: 6,
+  email: 'adedokun@futa.edu.ng',
+  first_name: 'Engr. A.O',
+  last_name: 'Adedokun',
+  role: 'lecturer',
+  avatar: 'AA'
 };
 
 // Mock courses
 export const mockCourses: Course[] = [
   {
     course_id: 1,
-    course_code: 'CSC 301',
-    course_name: 'Computer Networks',
-    department: 'Computer Science',
+    course_code: 'CPE 506',
+    course_name: 'Cyberpreneurship and Cyberlaw',
+    department: 'Computer Engineering',
     semester: 'Spring 2024',
     academic_year: '2023-2024',
     lecturer_id: 2,
-    lecturer: mockLecturerUser,
+    lecturer: mockLecturerOdeyemi,
     students_count: 65,
     total_lectures: 25
   },
   {
     course_id: 2,
-    course_code: 'CSC 305',
-    course_name: 'Database Management Systems',
-    department: 'Computer Science',
+    course_code: 'CPE 522',
+    course_name: 'Operating System',
+    department: 'Computer Engineering',
     semester: 'Spring 2024',
     academic_year: '2023-2024',
     lecturer_id: 2,
-    lecturer: mockLecturerUser,
+    lecturer: mockLecturerAdedokun,
     students_count: 58,
     total_lectures: 24
   },
   {
     course_id: 3,
-    course_code: 'CSC 307',
-    course_name: 'Software Engineering',
-    department: 'Computer Science',
+    course_code: 'CPE 508',
+    course_name: 'Computer Graphics and Animation',
+    department: 'Computer Engineering',
     semester: 'Spring 2024',
     academic_year: '2023-2024',
     lecturer_id: 2,
-    lecturer: mockLecturerUser,
+    lecturer: mockLecturerApena,
     students_count: 72,
     total_lectures: 26
   }
@@ -165,75 +201,75 @@ export const mockEnrollments: Enrollment[] = [
   }
 ];
 
-// Mock attendance records for table
-export const mockAttendanceRecords: AttendanceRecord[] = [
-  {
-    student_id: 1,
-    name: 'Alice Johnson',
-    email: 'ajohnson@university.edu',
-    student_code: 'STU2024001',
-    attended: 24,
-    absent: 1,
-    late: 0,
-    percentage: 96,
-    status: 'excellent'
-  },
-  {
-    student_id: 2,
-    name: 'Brian Smith',
-    email: 'bsmith@university.edu',
-    student_code: 'STU2024002',
-    attended: 23,
-    absent: 2,
-    late: 0,
-    percentage: 92,
-    status: 'excellent'
-  },
-  {
-    student_id: 3,
-    name: 'Catherine Davis',
-    email: 'cdavis@university.edu',
-    student_code: 'STU2024003',
-    attended: 22,
-    absent: 2,
-    late: 1,
-    percentage: 88,
-    status: 'good'
-  },
-  {
-    student_id: 4,
-    name: 'David Wilson',
-    email: 'dwilson@university.edu',
-    student_code: 'STU2024004',
-    attended: 20,
-    absent: 4,
-    late: 1,
-    percentage: 80,
-    status: 'fair'
-  },
-  {
-    student_id: 5,
-    name: 'Emma Martinez',
-    email: 'emartinez@university.edu',
-    student_code: 'STU2024005',
-    attended: 24,
-    absent: 1,
-    late: 0,
-    percentage: 96,
-    status: 'excellent'
-  },
-  {
-    student_id: 6,
-    name: 'Frank Taylor',
-    email: 'ftaylor@university.edu',
-    student_code: 'STU2024006',
-    attended: 16,
-    absent: 8,
-    late: 1,
-    percentage: 64,
-    status: 'at-risk'
-  }
+type CourseAttendanceRecord = AttendanceRecord & {
+  course: 'CSC301' | 'CSC305' | 'CSC307';
+};
+
+const attendanceStudents = [
+  { student_id: 1, name: 'Alice Johnson', email: 'ajohnson@futa.edu.ng', student_code: 'CPE/24/0001' },
+  { student_id: 2, name: 'Brian Smith', email: 'bsmith@futa.edu.ng', student_code: 'CPE/24/0002' },
+  { student_id: 3, name: 'Catherine Davis', email: 'cdavis@futa.edu.ng', student_code: 'CPE/24/0003' },
+  { student_id: 4, name: 'David Wilson', email: 'dwilson@futa.edu.ng', student_code: 'CPE/24/0004' },
+  { student_id: 5, name: 'Emma Martinez', email: 'emartinez@futa.edu.ng', student_code: 'CPE/24/0005' },
+  { student_id: 6, name: 'Frank Taylor', email: 'ftaylor@futa.edu.ng', student_code: 'CPE/24/0006' },
+  { student_id: 7, name: 'Tolu Adebayo', email: 'tadebayo@futa.edu.ng', student_code: 'CPE/24/0007' },
+  { student_id: 8, name: 'Chioma Okafor', email: 'cokafor@futa.edu.ng', student_code: 'CPE/24/0008' },
+  { student_id: 9, name: 'Ifeoluwa Balogun', email: 'ibalogun@futa.edu.ng', student_code: 'CPE/24/0009' },
+  { student_id: 10, name: 'Musa Abdullahi', email: 'mabdullahi@futa.edu.ng', student_code: 'CPE/24/0010' },
+  { student_id: 11, name: 'Amina Yusuf', email: 'ayusuf@futa.edu.ng', student_code: 'CPE/24/0011' },
+  { student_id: 12, name: 'Kelechi Nwosu', email: 'knwosu@futa.edu.ng', student_code: 'CPE/24/0012' },
+  { student_id: 13, name: 'Seyi Adekunle', email: 'sadekunle@futa.edu.ng', student_code: 'CPE/24/0013' },
+  { student_id: 14, name: 'Zainab Bello', email: 'zbello@futa.edu.ng', student_code: 'CPE/24/0014' },
+  { student_id: 15, name: 'Daniel Eze', email: 'deze@futa.edu.ng', student_code: 'CPE/24/0015' },
+  { student_id: 16, name: 'Blessing Ojo', email: 'bojo@futa.edu.ng', student_code: 'CPE/24/0016' }
 ];
+
+const courseAttendanceProfiles = {
+  CSC301: [
+    [24, 1, 0], [23, 2, 0], [22, 2, 1], [20, 4, 1],
+    [24, 1, 0], [16, 8, 1], [21, 3, 1], [19, 5, 1],
+    [25, 0, 0], [18, 6, 1], [22, 3, 0], [17, 7, 1],
+    [20, 4, 1], [23, 1, 1], [15, 9, 1], [21, 4, 0]
+  ],
+  CSC305: [
+    [21, 3, 0], [24, 0, 0], [18, 5, 1], [22, 2, 0],
+    [19, 4, 1], [20, 3, 1], [23, 1, 0], [17, 6, 1],
+    [21, 2, 1], [16, 7, 1], [24, 0, 0], [20, 4, 0],
+    [18, 5, 1], [22, 1, 1], [19, 4, 1], [15, 8, 1]
+  ],
+  CSC307: [
+    [25, 1, 0], [22, 4, 0], [24, 1, 1], [18, 7, 1],
+    [21, 4, 1], [17, 8, 1], [25, 0, 1], [20, 5, 1],
+    [23, 2, 1], [19, 6, 1], [16, 9, 1], [22, 3, 1],
+    [24, 2, 0], [18, 6, 2], [21, 5, 0], [20, 4, 2]
+  ]
+} as const;
+
+function getAttendanceStatus(percentage: number): AttendanceRecord['status'] {
+  if (percentage >= 90) return 'excellent';
+  if (percentage >= 75) return 'good';
+  if (percentage >= 60) return 'fair';
+  return 'at-risk';
+}
+
+// Mock attendance records for table. The same students appear in every course,
+// with course-specific attendance counts and percentages.
+export const mockAttendanceRecords: CourseAttendanceRecord[] = Object.entries(courseAttendanceProfiles)
+  .flatMap(([course, profiles]) =>
+    profiles.map(([attended, absent, late], index) => {
+      const percentage = Math.round((attended / (attended + absent + late)) * 100);
+
+      return {
+        ...attendanceStudents[index],
+        course: course as CourseAttendanceRecord['course'],
+        attended,
+        absent,
+        late,
+        percentage,
+        status: getAttendanceStatus(percentage)
+      };
+    })
+  );
 
 // Helper function to get mock data
 export const getMockData = {

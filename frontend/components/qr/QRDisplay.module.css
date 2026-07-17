@@ -1,40 +1,39 @@
-/* components/qr/QRDisplay.module.css */
-
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
   position: sticky;
-  top: 20px;
+  top: 86px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .title {
+  color: var(--color-text);
   font-size: 22px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 850;
+  margin-bottom: 18px;
 }
 
 .qrContainer {
-  background: #f8f9fa;
-  padding: 40px;
-  border-radius: 15px;
-  margin-bottom: 20px;
+  background: var(--color-primary-soft);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color-border);
 }
 
 .qrPlaceholder {
-  background: white;
+  background: #ffffff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
 }
 
 .qrPlaceholder.expired {
-  background: #ffebee;
+  background: color-mix(in srgb, var(--color-danger) 12%, #ffffff);
 }
 
 .qrCode {
@@ -53,30 +52,30 @@
 }
 
 .expiredIcon {
-  font-size: 80px;
-  color: #f44336;
-  margin-bottom: 15px;
+  color: var(--color-danger);
+  margin-bottom: 14px;
 }
 
 .expiredMessage p {
+  color: var(--color-danger);
   font-size: 18px;
-  color: #f44336;
-  font-weight: 600;
+  font-weight: 850;
   margin-bottom: 0;
 }
 
 .qrInfo {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  background: var(--color-muted);
+  padding: 18px;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
 }
 
 .infoItem {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   padding: 10px 0;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .infoItem:last-child {
@@ -84,25 +83,27 @@
 }
 
 .infoLabel {
+  color: var(--color-text-muted);
   font-size: 14px;
-  color: #7f8c8d;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .infoValue {
+  color: var(--color-text);
   font-size: 14px;
-  color: #2c3e50;
-  font-weight: 500;
+  font-weight: 700;
+  text-align: right;
 }
 
 .timerDisplay {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
   font-size: 18px;
-  font-weight: bold;
-  color: #f093fb;
+  font-weight: 850;
 }
 
 .timerDisplay.expired {
-  color: #f44336;
+  color: var(--color-danger);
 }
 
 .actionButtons {
@@ -112,46 +113,59 @@
 }
 
 .actionBtn {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
+  min-height: 44px;
+  padding: 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .actionBtn.primary {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .actionBtn.secondary {
-  background: #ecf0f1;
-  color: #2c3e50;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+}
+
+.actionBtn.danger {
+  grid-column: 1 / -1;
+  background: color-mix(in srgb, var(--color-danger) 12%, var(--color-surface-solid));
+  color: var(--color-danger);
+  border-color: color-mix(in srgb, var(--color-danger) 35%, var(--color-border));
 }
 
 .actionBtn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-sm);
 }
 
-.actionBtn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .card {
     position: static;
   }
+}
 
+@media (max-width: 768px) {
   .actionButtons {
     grid-template-columns: 1fr;
+  }
+
+  .qrContainer {
+    padding: 18px;
+  }
+
+  .qrPlaceholder {
+    max-width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -162,13 +176,10 @@
 
   .card {
     box-shadow: none;
-    border: 1px solid #ddd;
+    border: 1px solid #d8dee8;
   }
 
-  .actionButtons {
-    display: none;
-  }
-
+  .actionButtons,
   .title {
     display: none;
   }

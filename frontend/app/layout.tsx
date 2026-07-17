@@ -8,7 +8,7 @@ import { NotificationProvider } from '@/context/NotificationContext';
 
 export const metadata: Metadata = {
   title: 'QR Attendance System',
-  description: 'A comprehensive QR code-based lecture assessment system',
+  description: 'A comprehensive QR code-based lecture attendance system',
   icons: {
     icon: '/favicon.ico',
   },

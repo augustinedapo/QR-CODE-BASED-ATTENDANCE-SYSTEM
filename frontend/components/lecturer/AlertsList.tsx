@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { Card, Alert } from 'react-bootstrap';
+import { AlertTriangle } from 'lucide-react';
 import styles from './AlertsList.module.css';
 
 interface AlertItem {
@@ -11,7 +12,7 @@ interface AlertItem {
   type: 'danger' | 'warning' | 'info';
   title: string;
   message: string;
-  icon: string;
+  Icon: typeof AlertTriangle;
 }
 
 const AlertsList: React.FC = () => {
@@ -19,23 +20,9 @@ const AlertsList: React.FC = () => {
     {
       id: 1,
       type: 'danger',
-      icon: '⚠️',
+      Icon: AlertTriangle,
       title: 'Students with Critical Attendance',
       message: '5 students in CSC 307 have attendance below 75%. Immediate action recommended.'
-    },
-    {
-      id: 2,
-      type: 'warning',
-      icon: '📝',
-      title: 'Assessment Completion Rate',
-      message: 'CSC 305 Quiz 8: Only 45 out of 58 students have completed. Deadline in 2 days.'
-    },
-    {
-      id: 3,
-      type: 'info',
-      icon: '💬',
-      title: 'New Feedback Available',
-      message: '12 students have submitted feedback for CSC 301 Lecture 25. Average rating: 4.8/5'
     }
   ];
 
@@ -49,7 +36,7 @@ const AlertsList: React.FC = () => {
             <div key={alert.id} className={styles.alertWrapper}>
               <Alert variant={alert.type} className={styles.alert}>
                 <div className={styles.alertContent}>
-                  <div className={styles.alertIcon}>{alert.icon}</div>
+                  <div className={styles.alertIcon}><alert.Icon size={22} aria-hidden="true" /></div>
                   <div className={styles.alertText}>
                     <div className={styles.alertTitle}>{alert.title}</div>
                     <div className={styles.alertMessage}>{alert.message}</div>

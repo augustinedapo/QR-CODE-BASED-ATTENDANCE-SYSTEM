@@ -4,10 +4,11 @@
 
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { CheckCircle2 } from 'lucide-react';
 import styles from './ActivityFeed.module.css';
 
 interface Activity {
-  icon: string;
+  Icon: typeof CheckCircle2;
   title: string;
   description: string;
   time: string;
@@ -17,28 +18,14 @@ interface Activity {
 const ActivityFeed: React.FC = () => {
   const activities: Activity[] = [
     {
-      icon: '✓',
+      Icon: CheckCircle2,
       title: 'Attendance Marked',
       description: 'Computer Networks - Lecture 23',
       time: '2 hours ago',
       type: 'success'
     },
     {
-      icon: '✓',
-      title: 'Assessment Completed',
-      description: 'Database Management Systems - Quiz 8',
-      time: '1 day ago',
-      type: 'success'
-    },
-    {
-      icon: '💬',
-      title: 'Feedback Submitted',
-      description: 'Software Engineering - Lecture Feedback',
-      time: '2 days ago',
-      type: 'info'
-    },
-    {
-      icon: '✓',
+      Icon: CheckCircle2,
       title: 'Attendance Marked',
       description: 'Database Management Systems - Lecture 22',
       time: '3 days ago',
@@ -55,7 +42,7 @@ const ActivityFeed: React.FC = () => {
           {activities.map((activity, index) => (
             <div key={index} className={`${styles.item} ${styles[activity.type]}`}>
               <div className={styles.iconWrapper}>
-                <div className={styles.icon}>{activity.icon}</div>
+                <div className={styles.icon}><activity.Icon size={18} aria-hidden="true" /></div>
               </div>
               <div className={styles.content}>
                 <div className={styles.itemTitle}>{activity.title}</div>

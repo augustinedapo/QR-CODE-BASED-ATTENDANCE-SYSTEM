@@ -1,37 +1,1355 @@
-INFO 2026-06-13 00:14:04,117 autoreload 42412 38900 Watching for file changes with StatReloader
-WARNING 2026-06-13 00:14:23,063 log 42412 13864 Not Found: /
-WARNING 2026-06-13 00:14:23,064 basehttp 42412 13864 "GET / HTTP/1.1" 404 2845
-WARNING 2026-06-13 00:14:23,914 log 42412 13864 Not Found: /favicon.ico
-WARNING 2026-06-13 00:14:23,916 basehttp 42412 13864 "GET /favicon.ico HTTP/1.1" 404 2896
-WARNING 2026-06-13 00:18:03,421 log 42412 41596 Not Found: /
-WARNING 2026-06-13 00:18:03,426 basehttp 42412 41596 "GET / HTTP/1.1" 404 2845
-WARNING 2026-06-13 00:18:06,160 log 42412 41596 Not Found: /favicon.ico
-WARNING 2026-06-13 00:18:06,161 basehttp 42412 41596 "GET /favicon.ico HTTP/1.1" 404 2896
-WARNING 2026-06-13 00:18:56,418 log 42412 48068 Bad Request: /api/auth/login/
-WARNING 2026-06-13 00:18:56,421 basehttp 42412 48068 "POST /api/auth/login/ HTTP/1.1" 400 79
-WARNING 2026-06-13 00:19:12,708 log 42412 43756 Bad Request: /api/auth/login/
-WARNING 2026-06-13 00:19:12,712 basehttp 42412 43756 "POST /api/auth/login/ HTTP/1.1" 400 79
-WARNING 2026-06-13 00:19:19,527 log 42412 27012 Bad Request: /api/auth/login/
-WARNING 2026-06-13 00:19:19,530 basehttp 42412 27012 "POST /api/auth/login/ HTTP/1.1" 400 79
-INFO 2026-06-15 08:49:15,098 autoreload 42412 38900 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
-INFO 2026-06-15 08:49:19,147 autoreload 45000 44776 Watching for file changes with StatReloader
-INFO 2026-06-15 08:54:18,840 autoreload 45000 44776 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
-INFO 2026-06-15 08:54:22,301 autoreload 40500 35608 Watching for file changes with StatReloader
-INFO 2026-06-26 13:31:34,967 autoreload 36816 34156 Watching for file changes with StatReloader
-WARNING 2026-06-26 13:32:41,454 log 36816 6660 Unauthorized: /api/
-WARNING 2026-06-26 13:32:41,462 basehttp 36816 6660 "GET /api/ HTTP/1.1" 401 58
-INFO 2026-06-26 13:36:30,843 autoreload 36816 34156 C:\Users\HP\QR_Attendance_App\Backend\accounts\models.py changed, reloading.
-INFO 2026-06-26 13:36:32,767 autoreload 16328 2000 Watching for file changes with StatReloader
-INFO 2026-06-26 13:37:12,701 autoreload 23352 16800 Watching for file changes with StatReloader
-WARNING 2026-06-26 13:37:38,543 log 16328 1304 Not Found: /
-WARNING 2026-06-26 13:37:38,553 basehttp 16328 1304 "GET / HTTP/1.1" 404 2845
-WARNING 2026-06-26 13:37:41,176 log 16328 1304 Not Found: /favicon.ico
-WARNING 2026-06-26 13:37:41,186 basehttp 16328 1304 "GET /favicon.ico HTTP/1.1" 404 2896
-WARNING 2026-06-26 21:00:02,145 log 16328 38416 Not Found: /
-WARNING 2026-06-26 21:00:02,161 basehttp 16328 38416 "GET / HTTP/1.1" 404 2845
-INFO 2026-06-29 08:21:51,239 autoreload 6668 40832 Watching for file changes with StatReloader
-WARNING 2026-06-29 08:23:06,938 log 23352 32000 Not Found: /
-WARNING 2026-06-29 08:23:06,991 basehttp 23352 32000 "GET / HTTP/1.1" 404 2845
-INFO 2026-06-30 10:28:47,011 autoreload 27732 38224 Watching for file changes with StatReloader
-WARNING 2026-06-30 10:29:23,871 log 23352 32228 Not Found: /
-WARNING 2026-06-30 10:29:23,886 basehttp 23352 32228 "GET / HTTP/1.1" 404 2845
+INFO 2026-07-09 23:23:57,832 autoreload 35032 33288 Watching for file changes with StatReloader
+INFO 2026-07-09 23:25:14,850 autoreload 35032 33288 C:\Users\HP\QR_Attendance_App\Backend\courses\serializers.py changed, reloading.
+INFO 2026-07-09 23:25:15,894 autoreload 24768 21308 Watching for file changes with StatReloader
+INFO 2026-07-09 23:25:35,893 autoreload 24768 21308 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-09 23:25:37,274 autoreload 22396 5600 Watching for file changes with StatReloader
+ERROR 2026-07-09 23:26:25,906 log 22396 18416 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 73, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 54, in validate
+    self.user = authenticate(**authenticate_kwargs)
+                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users.id
+ERROR 2026-07-09 23:26:25,928 basehttp 22396 18416 "POST /api/auth/login/ HTTP/1.1" 500 219830
+ERROR 2026-07-09 23:26:26,106 log 22396 1676 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 73, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 54, in validate
+    self.user = authenticate(**authenticate_kwargs)
+                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users.id
+ERROR 2026-07-09 23:26:26,115 basehttp 22396 1676 "POST /api/auth/login/ HTTP/1.1" 500 219789
+ERROR 2026-07-09 23:26:26,215 log 22396 35280 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 73, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 54, in validate
+    self.user = authenticate(**authenticate_kwargs)
+                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\backends.py", line 46, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users.id
+ERROR 2026-07-09 23:26:26,224 basehttp 22396 35280 "POST /api/auth/login/ HTTP/1.1" 500 219680
+WARNING 2026-07-09 23:26:26,247 log 22396 32268 Unauthorized: /api/users/me/
+WARNING 2026-07-09 23:26:26,249 basehttp 22396 32268 "GET /api/users/me/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,362 log 22396 34468 Unauthorized: /api/users/
+WARNING 2026-07-09 23:26:26,363 basehttp 22396 34468 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,368 log 22396 19412 Unauthorized: /api/users/
+WARNING 2026-07-09 23:26:26,369 basehttp 22396 19412 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,375 log 22396 33704 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:26:26,377 basehttp 22396 33704 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,382 log 22396 34132 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:26:26,383 basehttp 22396 34132 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,402 log 22396 27792 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:26:26,403 basehttp 22396 27792 "POST /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,408 log 22396 12184 Unauthorized: /api/lectures/
+WARNING 2026-07-09 23:26:26,409 basehttp 22396 12184 "GET /api/lectures/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,416 log 22396 15248 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:26:26,417 basehttp 22396 15248 "POST /api/notifications/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:26:26,424 log 22396 34348 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:26:26,425 basehttp 22396 34348 "GET /api/notifications/ HTTP/1.1" 401 58
+INFO 2026-07-09 23:27:06,754 autoreload 22396 5600 C:\Users\HP\QR_Attendance_App\Backend\accounts\models.py changed, reloading.
+INFO 2026-07-09 23:27:08,019 autoreload 35176 24288 Watching for file changes with StatReloader
+WARNING 2026-07-09 23:28:11,500 log 35176 34196 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:28:11,501 basehttp 35176 34196 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:28:11,679 log 35176 31404 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:28:11,680 basehttp 35176 31404 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:28:11,715 log 35176 16716 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:28:11,716 basehttp 35176 16716 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:28:11,729 log 35176 11976 Unauthorized: /api/users/me/
+WARNING 2026-07-09 23:28:11,730 basehttp 35176 11976 "GET /api/users/me/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,738 log 35176 26880 Unauthorized: /api/users/
+WARNING 2026-07-09 23:28:11,739 basehttp 35176 26880 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,744 log 35176 32064 Unauthorized: /api/users/
+WARNING 2026-07-09 23:28:11,745 basehttp 35176 32064 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,752 log 35176 31052 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:28:11,755 basehttp 35176 31052 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,761 log 35176 16012 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:28:11,763 basehttp 35176 16012 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,779 log 35176 16792 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:28:11,781 basehttp 35176 16792 "POST /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,788 log 35176 21180 Unauthorized: /api/lectures/
+WARNING 2026-07-09 23:28:11,790 basehttp 35176 21180 "GET /api/lectures/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,799 log 35176 10344 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:28:11,800 basehttp 35176 10344 "POST /api/notifications/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:28:11,808 log 35176 15240 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:28:11,810 basehttp 35176 15240 "GET /api/notifications/ HTTP/1.1" 401 58
+ERROR 2026-07-09 23:30:12,834 log 35176 16924 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 75, in validate
+    refresh = self.get_token(self.user)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 66, in get_token
+    return cls.token_class.for_user(user)  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 203, in for_user
+    user_id = getattr(user, api_settings.USER_ID_FIELD)
+AttributeError: 'CustomUser' object has no attribute 'id'
+ERROR 2026-07-09 23:30:12,846 basehttp 35176 16924 "POST /api/auth/login/ HTTP/1.1" 500 128072
+ERROR 2026-07-09 23:30:14,096 log 35176 4844 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 75, in validate
+    refresh = self.get_token(self.user)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 66, in get_token
+    return cls.token_class.for_user(user)  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 203, in for_user
+    user_id = getattr(user, api_settings.USER_ID_FIELD)
+AttributeError: 'CustomUser' object has no attribute 'id'
+ERROR 2026-07-09 23:30:14,103 basehttp 35176 4844 "POST /api/auth/login/ HTTP/1.1" 500 128054
+ERROR 2026-07-09 23:30:15,211 log 35176 35172 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py", line 12, in validate
+    data = super().validate(attrs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 75, in validate
+    refresh = self.get_token(self.user)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 66, in get_token
+    return cls.token_class.for_user(user)  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 203, in for_user
+    user_id = getattr(user, api_settings.USER_ID_FIELD)
+AttributeError: 'CustomUser' object has no attribute 'id'
+ERROR 2026-07-09 23:30:15,216 basehttp 35176 35172 "POST /api/auth/login/ HTTP/1.1" 500 128007
+WARNING 2026-07-09 23:30:15,234 log 35176 20148 Unauthorized: /api/users/me/
+WARNING 2026-07-09 23:30:15,236 basehttp 35176 20148 "GET /api/users/me/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,346 log 35176 33788 Unauthorized: /api/users/
+WARNING 2026-07-09 23:30:15,347 basehttp 35176 33788 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,354 log 35176 33268 Unauthorized: /api/users/
+WARNING 2026-07-09 23:30:15,355 basehttp 35176 33268 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,361 log 35176 30840 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:30:15,362 basehttp 35176 30840 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,368 log 35176 31156 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:30:15,370 basehttp 35176 31156 "GET /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,384 log 35176 30760 Unauthorized: /api/courses/
+WARNING 2026-07-09 23:30:15,385 basehttp 35176 30760 "POST /api/courses/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,391 log 35176 29452 Unauthorized: /api/lectures/
+WARNING 2026-07-09 23:30:15,392 basehttp 35176 29452 "GET /api/lectures/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,399 log 35176 34868 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:30:15,400 basehttp 35176 34868 "POST /api/notifications/ HTTP/1.1" 401 58
+WARNING 2026-07-09 23:30:15,406 log 35176 35028 Unauthorized: /api/notifications/
+WARNING 2026-07-09 23:30:15,407 basehttp 35176 35028 "GET /api/notifications/ HTTP/1.1" 401 58
+INFO 2026-07-09 23:30:52,423 autoreload 35176 24288 C:\Users\HP\QR_Attendance_App\Backend\qr_attendance_config\settings.py changed, reloading.
+INFO 2026-07-09 23:30:53,732 autoreload 29788 17416 Watching for file changes with StatReloader
+INFO 2026-07-09 23:31:04,187 basehttp 29788 35052 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:31:57,172 basehttp 29788 27008 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:31:58,332 basehttp 29788 32032 "POST /api/auth/login/ HTTP/1.1" 200 610
+INFO 2026-07-09 23:31:59,255 basehttp 29788 32764 "POST /api/auth/login/ HTTP/1.1" 200 606
+INFO 2026-07-09 23:31:59,270 basehttp 29788 2852 "POST /api/auth/refresh/ HTTP/1.1" 200 483
+INFO 2026-07-09 23:31:59,286 basehttp 29788 32392 "GET /api/users/me/ HTTP/1.1" 200 298
+INFO 2026-07-09 23:31:59,303 basehttp 29788 19292 "GET /api/users/ HTTP/1.1" 200 3121
+INFO 2026-07-09 23:31:59,334 basehttp 29788 33272 "GET /api/users/ HTTP/1.1" 200 351
+INFO 2026-07-09 23:31:59,358 basehttp 29788 30896 "GET /api/courses/ HTTP/1.1" 200 1678
+INFO 2026-07-09 23:31:59,390 basehttp 29788 21328 "GET /api/courses/ HTTP/1.1" 200 2482
+INFO 2026-07-09 23:31:59,418 basehttp 29788 30588 "GET /api/courses/2/ HTTP/1.1" 200 807
+INFO 2026-07-09 23:31:59,454 basehttp 29788 5668 "POST /api/courses/ HTTP/1.1" 201 740
+INFO 2026-07-09 23:31:59,554 basehttp 29788 1528 "GET /api/lectures/ HTTP/1.1" 200 13123
+INFO 2026-07-09 23:31:59,636 basehttp 29788 34272 "POST /api/lectures/generate_qr/ HTTP/1.1" 201 1769
+INFO 2026-07-09 23:31:59,666 basehttp 29788 34788 "GET /api/lectures/16/ HTTP/1.1" 200 1487
+INFO 2026-07-09 23:31:59,722 basehttp 29788 12216 "POST /api/attendance/mark_attendance/ HTTP/1.1" 201 2135
+WARNING 2026-07-09 23:31:59,738 log 29788 29460 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-09 23:31:59,740 basehttp 29788 29460 "POST /api/attendance/mark_attendance/ HTTP/1.1" 400 54
+INFO 2026-07-09 23:31:59,820 basehttp 29788 29480 "POST /api/lectures/generate_qr/ HTTP/1.1" 201 1768
+WARNING 2026-07-09 23:31:59,842 log 29788 20712 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-09 23:31:59,843 basehttp 29788 20712 "POST /api/attendance/mark_attendance/ HTTP/1.1" 400 124
+INFO 2026-07-09 23:31:59,881 basehttp 29788 6604 "GET /api/attendance/course_attendance/?course_id=2 HTTP/1.1" 200 2031
+INFO 2026-07-09 23:31:59,965 basehttp 29788 33716 "GET /api/attendance/course_analytics/?course_id=2 HTTP/1.1" 200 2208
+INFO 2026-07-09 23:32:00,050 basehttp 29788 24520 "POST /api/attendance/generate_report/ HTTP/1.1" 201 10182
+INFO 2026-07-09 23:32:00,080 basehttp 29788 28784 "POST /api/feedback/ HTTP/1.1" 201 190
+INFO 2026-07-09 23:32:00,104 basehttp 29788 19452 "GET /api/feedback/ HTTP/1.1" 200 686
+INFO 2026-07-09 23:32:00,124 basehttp 29788 7448 "GET /api/feedback/4/ HTTP/1.1" 200 190
+INFO 2026-07-09 23:32:00,155 basehttp 29788 34040 "POST /api/feedback/4/questions/ HTTP/1.1" 201 140
+INFO 2026-07-09 23:32:00,179 basehttp 29788 7380 "GET /api/feedback/4/questions/ HTTP/1.1" 200 142
+INFO 2026-07-09 23:32:00,223 basehttp 29788 23760 "POST /api/feedback/4/responses/ HTTP/1.1" 201 143
+INFO 2026-07-09 23:32:00,253 basehttp 29788 19736 "GET /api/feedback/4/responses/ HTTP/1.1" 200 145
+INFO 2026-07-09 23:32:00,285 basehttp 29788 30072 "POST /api/notifications/ HTTP/1.1" 201 320
+INFO 2026-07-09 23:32:00,308 basehttp 29788 26936 "GET /api/notifications/ HTTP/1.1" 200 372
+INFO 2026-07-09 23:32:00,338 basehttp 29788 12544 "POST /api/notifications/21/mark_read/ HTTP/1.1" 200 344
+INFO 2026-07-09 23:32:23,222 basehttp 29788 15596 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:32:24,361 basehttp 29788 18952 "POST /api/auth/login/ HTTP/1.1" 200 610
+INFO 2026-07-09 23:32:25,344 basehttp 29788 5852 "POST /api/auth/login/ HTTP/1.1" 200 606
+INFO 2026-07-09 23:32:25,444 basehttp 29788 35464 "GET /api/enrollments/ HTTP/1.1" 200 12737
+INFO 2026-07-09 23:32:25,564 basehttp 29788 10156 "GET /api/enrollments/ HTTP/1.1" 200 12737
+INFO 2026-07-09 23:32:25,604 basehttp 29788 26728 "GET /api/attendance/ HTTP/1.1" 200 2081
+INFO 2026-07-09 23:32:25,642 basehttp 29788 31092 "GET /api/attendance/ HTTP/1.1" 200 2081
+INFO 2026-07-09 23:32:25,661 basehttp 29788 16880 "GET /api/feedback/ HTTP/1.1" 200 886
+WARNING 2026-07-09 23:32:25,674 log 29788 6896 Not Found: /api/notifications/1/
+WARNING 2026-07-09 23:32:25,676 basehttp 29788 6896 "GET /api/notifications/1/ HTTP/1.1" 404 23
+INFO 2026-07-09 23:32:42,487 autoreload 29788 17416 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-09 23:32:44,188 autoreload 11592 11948 Watching for file changes with StatReloader
+INFO 2026-07-09 23:32:54,147 basehttp 11592 5484 "POST /api/auth/login/ HTTP/1.1" 200 610
+INFO 2026-07-09 23:32:55,283 basehttp 11592 33516 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:32:55,331 basehttp 11592 23112 "GET /api/enrollments/ HTTP/1.1" 200 3808
+INFO 2026-07-09 23:32:55,422 basehttp 11592 21228 "GET /api/enrollments/ HTTP/1.1" 200 12737
+INFO 2026-07-09 23:35:21,005 autoreload 23296 12968 Watching for file changes with StatReloader
+WARNING 2026-07-09 23:35:40,867 log 11592 13780 Not Found: /
+WARNING 2026-07-09 23:35:40,871 basehttp 11592 13780 "GET / HTTP/1.1" 404 2845
+INFO 2026-07-09 23:35:50,479 basehttp 11592 18552 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-07-09 23:35:51,223 log 11592 18552 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:35:51,225 basehttp 11592 18552 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:36:02,014 log 11592 18552 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:36:02,015 basehttp 11592 18552 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:37:03,952 log 11592 18552 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:37:03,953 basehttp 11592 18552 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:37:27,030 log 11592 18552 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:37:27,031 basehttp 11592 18552 "POST /api/auth/login/ HTTP/1.1" 401 63
+WARNING 2026-07-09 23:38:46,747 log 11592 25012 Unauthorized: /api/auth/login/
+WARNING 2026-07-09 23:38:46,749 basehttp 11592 25012 "POST /api/auth/login/ HTTP/1.1" 401 63
+INFO 2026-07-09 23:38:46,775 basehttp 11592 21808 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:39:48,498 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:40:37,002 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 610
+INFO 2026-07-09 23:41:02,739 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:43:57,273 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 611
+INFO 2026-07-09 23:46:20,322 basehttp 11592 35728 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-09 23:46:20,335 basehttp 11592 35728 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-09 23:46:20,379 basehttp 11592 35728 "GET /api/courses/ HTTP/1.1" 200 2419
+INFO 2026-07-09 23:46:20,417 basehttp 11592 35728 "GET /api/courses/ HTTP/1.1" 200 2419
+INFO 2026-07-09 23:47:15,213 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 610
+INFO 2026-07-09 23:48:55,596 basehttp 11592 35728 "POST /api/auth/login/ HTTP/1.1" 200 611
+WARNING 2026-07-10 00:15:02,359 log 11592 26852 Not Found: /
+WARNING 2026-07-10 00:15:02,362 basehttp 11592 26852 "GET / HTTP/1.1" 404 2845
+INFO 2026-07-10 00:21:58,441 basehttp 11592 8268 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2026-07-10 00:21:58,468 basehttp 11592 8268 "GET /api/users/me/ HTTP/1.1" 200 298
+INFO 2026-07-10 00:22:21,967 basehttp 11592 27716 "POST /api/auth/login/ HTTP/1.1" 200 619
+INFO 2026-07-10 00:23:09,123 basehttp 11592 8268 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-10 00:24:32,226 basehttp 11592 8268 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-10 00:24:36,965 basehttp 11592 8268 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-10 10:42:38,797 autoreload 11592 11948 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-07-10 10:42:40,593 autoreload 29884 27724 Watching for file changes with StatReloader
+INFO 2026-07-10 10:43:06,091 basehttp 29884 35884 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+WARNING 2026-07-10 10:43:06,157 log 29884 35884 Unauthorized: /api/users/me/
+WARNING 2026-07-10 10:43:06,160 basehttp 29884 35884 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-10 10:45:31,546 basehttp 29884 36356 "POST /api/auth/register/ HTTP/1.1" 201 833
+INFO 2026-07-10 10:45:33,631 basehttp 29884 26188 "POST /api/auth/register/ HTTP/1.1" 201 838
+INFO 2026-07-10 21:25:19,752 autoreload 29884 27724 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-10 21:25:23,846 autoreload 34436 7580 Watching for file changes with StatReloader
+INFO 2026-07-10 21:30:20,412 autoreload 34436 7580 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-10 21:30:22,164 autoreload 36288 25492 Watching for file changes with StatReloader
+INFO 2026-07-10 21:31:46,909 basehttp 36288 31644 "POST /api/auth/login/ HTTP/1.1" 200 619
+INFO 2026-07-10 21:31:47,536 basehttp 36288 23468 "POST /api/courses/ HTTP/1.1" 201 817
+INFO 2026-07-10 21:31:49,789 basehttp 36288 33116 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-10 21:31:49,859 basehttp 36288 21036 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 819
+INFO 2026-07-10 21:31:50,045 basehttp 36288 28940 "POST /api/courses/5/enroll/ HTTP/1.1" 201 1269
+INFO 2026-07-11 18:36:28,817 autoreload 36288 25492 C:\Users\HP\QR_Attendance_App\Backend\courses\models.py changed, reloading.
+INFO 2026-07-11 18:36:35,093 autoreload 12544 37352 Watching for file changes with StatReloader
+INFO 2026-07-11 18:36:43,686 autoreload 12544 37352 C:\Users\HP\QR_Attendance_App\Backend\courses\serializers.py changed, reloading.
+INFO 2026-07-11 18:36:47,827 autoreload 35032 27280 Watching for file changes with StatReloader
+INFO 2026-07-11 18:37:28,812 autoreload 35032 27280 C:\Users\HP\QR_Attendance_App\Backend\attendance\views.py changed, reloading.
+INFO 2026-07-11 18:37:30,384 autoreload 28856 24200 Watching for file changes with StatReloader
+INFO 2026-07-11 18:38:08,369 autoreload 28856 24200 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-11 18:38:09,983 autoreload 39388 30092 Watching for file changes with StatReloader
+INFO 2026-07-11 18:46:00,999 basehttp 39388 36472 "POST /api/auth/login/ HTTP/1.1" 200 619
+INFO 2026-07-11 18:46:01,861 basehttp 39388 38080 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-11 18:46:01,926 basehttp 39388 28840 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 18:46:02,030 basehttp 39388 29672 "POST /api/lectures/generate_qr/ HTTP/1.1" 201 1889
+INFO 2026-07-11 18:46:02,067 basehttp 39388 36856 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 4874
+INFO 2026-07-11 18:46:02,089 basehttp 39388 30196 "GET /api/lectures/18/live_attendance/ HTTP/1.1" 200 89
+WARNING 2026-07-11 18:46:02,123 log 39388 37712 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 18:46:02,125 basehttp 39388 37712 "POST /api/attendance/mark_attendance/ HTTP/1.1" 400 154
+INFO 2026-07-11 18:46:02,353 basehttp 39388 6096 "POST /api/lectures/generate_qr/ HTTP/1.1" 201 1883
+INFO 2026-07-11 18:46:02,404 basehttp 39388 36784 "POST /api/attendance/mark_attendance/ HTTP/1.1" 201 2261
+WARNING 2026-07-11 18:46:02,435 log 39388 39528 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 18:46:02,437 basehttp 39388 39528 "POST /api/attendance/mark_attendance/ HTTP/1.1" 400 134
+INFO 2026-07-11 18:46:02,467 basehttp 39388 24396 "POST /api/lectures/18/close_qr/ HTTP/1.1" 200 1712
+INFO 2026-07-11 18:46:02,512 basehttp 39388 22848 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 6797
+INFO 2026-07-11 18:46:02,527 basehttp 39388 23768 "GET /api/notifications/ HTTP/1.1" 200 1121
+INFO 2026-07-11 18:59:53,570 basehttp 39388 26604 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-11 18:59:54,620 basehttp 39388 26604 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-11 18:59:55,216 basehttp 39388 26604 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-11 18:59:55,217 basehttp 39388 19688 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-11 18:59:55,235 basehttp 39388 26604 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-11 18:59:55,240 basehttp 39388 19688 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-11 18:59:55,328 basehttp 39388 26604 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 18:59:55,358 basehttp 39388 26604 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 18:59:55,382 basehttp 39388 19688 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 18:59:55,463 basehttp 39388 26604 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 19:00:53,302 basehttp 39388 26604 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:00:53,322 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 19:01:03,894 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 19:01:08,958 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 19:01:09,186 basehttp 39388 19688 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 19:01:09,208 basehttp 39388 26604 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 19:01:09,211 basehttp 39388 19688 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 19:01:09,285 basehttp 39388 26604 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 19:01:24,044 basehttp 39388 26604 "POST /api/auth/login/ HTTP/1.1" 200 619
+INFO 2026-07-11 19:01:24,559 basehttp 39388 26604 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:01:24,569 basehttp 39388 19688 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:01:24,632 basehttp 39388 19688 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:01:24,681 basehttp 39388 26604 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:02:04,352 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:02:04,533 basehttp 39388 26604 "OPTIONS /api/lectures/qr_sessions/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:02:04,716 basehttp 39388 26604 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 6510
+INFO 2026-07-11 19:04:31,122 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:04:38,476 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:04:38,675 basehttp 39388 26604 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 6510
+INFO 2026-07-11 19:04:42,820 basehttp 39388 26604 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:04:42,994 basehttp 39388 26604 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:04:43,051 basehttp 39388 19688 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:11:53,574 autoreload 39388 30092 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-11 19:11:55,121 autoreload 29788 38828 Watching for file changes with StatReloader
+INFO 2026-07-11 19:12:42,123 autoreload 29788 38828 C:\Users\HP\QR_Attendance_App\Backend\attendance\views.py changed, reloading.
+INFO 2026-07-11 19:12:43,475 autoreload 16412 33840 Watching for file changes with StatReloader
+ERROR 2026-07-11 19:22:50,911 exception 15928 8716 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-11 19:22:51,758 log 15928 8716 Bad Request: /api/courses/available_for_enrollment/
+ERROR 2026-07-11 19:22:51,759 exception 15928 8716 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-11 19:22:51,783 log 15928 8716 Bad Request: /api/attendance/my_course_summary/
+ERROR 2026-07-11 19:22:51,784 exception 15928 8716 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-11 19:22:51,807 log 15928 8716 Bad Request: /api/attendance/missed_lectures/
+ERROR 2026-07-11 19:22:51,808 exception 15928 8716 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-11 19:22:51,828 log 15928 8716 Bad Request: /api/lectures/upcoming/
+ERROR 2026-07-11 19:22:51,828 exception 15928 8716 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-11 19:22:51,849 log 15928 8716 Bad Request: /api/courses/
+INFO 2026-07-11 19:53:47,025 basehttp 16412 31160 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:53:47,139 basehttp 16412 31160 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:53:47,178 basehttp 16412 31160 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:55:11,682 basehttp 16412 31160 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:55:12,011 basehttp 16412 31160 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 6510
+INFO 2026-07-11 19:55:16,381 basehttp 16412 31160 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:55:16,595 basehttp 16412 31160 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:55:16,680 basehttp 16412 31160 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 6510
+INFO 2026-07-11 19:55:16,847 basehttp 16412 31160 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:55:16,925 basehttp 16412 24880 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 6510
+INFO 2026-07-11 19:55:47,938 basehttp 16412 24880 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 19:55:48,349 basehttp 16412 24880 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:55:48,395 basehttp 16412 31160 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 19:56:02,356 basehttp 16412 31160 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-11 19:56:02,837 basehttp 16412 31160 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,840 basehttp 16412 24880 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,880 basehttp 16412 24456 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 19:56:02,881 basehttp 16412 31160 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,897 basehttp 16412 24880 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,903 basehttp 16412 31160 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,907 basehttp 16412 24456 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:02,958 basehttp 16412 24456 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 19:56:02,975 basehttp 16412 31160 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 19:56:03,055 basehttp 16412 37044 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 19:56:03,064 basehttp 16412 31160 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 19:56:03,087 basehttp 16412 24456 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 19:56:03,102 basehttp 16412 24880 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 19:56:03,196 basehttp 16412 31160 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 19:56:03,226 basehttp 16412 37044 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 19:56:03,234 basehttp 16412 24456 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 19:56:24,490 basehttp 16412 27036 "OPTIONS /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester= HTTP/1.1" 200 0
+INFO 2026-07-11 19:56:24,502 basehttp 16412 27036 "GET /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester= HTTP/1.1" 200 2
+INFO 2026-07-11 20:04:53,222 basehttp 16412 24684 "OPTIONS /api/courses/3/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:04:53,226 basehttp 16412 30568 "OPTIONS /api/courses/3/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:04:53,226 basehttp 16412 35240 "OPTIONS /api/courses/3/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:04:53,243 basehttp 16412 19460 "OPTIONS /api/courses/3/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:04:53,311 basehttp 16412 30568 "GET /api/courses/3/ HTTP/1.1" 200 803
+INFO 2026-07-11 20:04:53,365 basehttp 16412 19460 "GET /api/courses/3/ HTTP/1.1" 200 803
+INFO 2026-07-11 20:04:53,371 basehttp 16412 35240 "GET /api/courses/3/lectures/ HTTP/1.1" 200 7014
+INFO 2026-07-11 20:04:53,512 basehttp 16412 19460 "GET /api/courses/3/lectures/ HTTP/1.1" 200 7014
+INFO 2026-07-11 20:04:53,513 basehttp 16412 35240 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:04:53,600 basehttp 16412 35240 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:04,460 basehttp 16412 19460 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:07:04,581 basehttp 16412 24684 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:07:04,659 basehttp 16412 19460 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:07:04,690 basehttp 16412 35240 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:07:04,697 basehttp 16412 24684 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:07:04,756 basehttp 16412 30568 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:04,758 basehttp 16412 19460 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:07:04,875 basehttp 16412 35240 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:07:05,028 basehttp 16412 24684 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:05,069 basehttp 16412 24272 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:07:11,125 basehttp 16412 24272 "OPTIONS /api/courses/1/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:07:11,137 basehttp 16412 24684 "OPTIONS /api/courses/1/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:07:11,151 basehttp 16412 35240 "OPTIONS /api/courses/1/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:07:11,154 basehttp 16412 24272 "OPTIONS /api/courses/1/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:07:11,218 basehttp 16412 35240 "GET /api/courses/1/ HTTP/1.1" 200 846
+INFO 2026-07-11 20:07:11,318 basehttp 16412 24684 "GET /api/courses/1/ HTTP/1.1" 200 846
+INFO 2026-07-11 20:07:11,339 basehttp 16412 24272 "GET /api/courses/1/lectures/ HTTP/1.1" 200 7320
+INFO 2026-07-11 20:07:11,465 basehttp 16412 24272 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:11,466 basehttp 16412 24684 "GET /api/courses/1/lectures/ HTTP/1.1" 200 7320
+INFO 2026-07-11 20:07:11,550 basehttp 16412 24684 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:19,303 basehttp 16412 24272 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:07:19,357 basehttp 16412 1676 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:07:19,394 basehttp 16412 19460 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:07:19,410 basehttp 16412 30568 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:07:19,484 basehttp 16412 35240 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:19,550 basehttp 16412 19460 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:07:19,559 basehttp 16412 1676 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:07:19,594 basehttp 16412 24684 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:07:19,645 basehttp 16412 30568 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:07:19,812 basehttp 16412 1676 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:09:18,688 basehttp 16412 1676 "OPTIONS /api/attendance/my_scan_history/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:09:18,689 basehttp 16412 30568 "OPTIONS /api/attendance/my_scan_history/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:09:19,077 basehttp 16412 1676 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 6801
+INFO 2026-07-11 20:09:19,191 basehttp 16412 30568 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 6801
+INFO 2026-07-11 20:10:22,230 basehttp 16412 30568 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 20:10:39,586 basehttp 16412 30568 "POST /api/auth/login/ HTTP/1.1" 200 619
+INFO 2026-07-11 20:10:40,051 basehttp 16412 30568 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 20:10:40,124 basehttp 16412 1676 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 20:19:16,181 autoreload 16412 33840 C:\Users\HP\QR_Attendance_App\Backend\attendance\views.py changed, reloading.
+INFO 2026-07-11 20:19:19,353 autoreload 32156 28452 Watching for file changes with StatReloader
+INFO 2026-07-11 20:21:01,538 autoreload 32156 28452 C:\Users\HP\QR_Attendance_App\Backend\qr_attendance_config\urls.py changed, reloading.
+INFO 2026-07-11 20:21:03,674 autoreload 13396 15688 Watching for file changes with StatReloader
+WARNING 2026-07-11 20:21:20,088 log 17664 37880 Bad Request: /api/auth/register/
+WARNING 2026-07-11 20:21:43,026 log 17664 37880 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:21:54,772 log 17664 37880 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:21:59,669 log 17664 37880 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:23:18,824 log 35688 38072 Bad Request: /api/auth/register/
+WARNING 2026-07-11 20:23:37,358 log 35688 38072 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:23:50,201 log 35688 38072 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:23:56,427 log 35688 38072 Bad Request: /api/attendance/mark_attendance/
+ERROR 2026-07-11 20:24:17,281 log 38088 11612 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\schemas\views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 406, in initial
+    neg = self.perform_content_negotiation(request)
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 306, in perform_content_negotiation
+    renderers = self.get_renderers()
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\views.py", line 260, in get_renderers
+    return [renderer() for renderer in self.renderer_classes]
+            ~~~~~~~~^^
+  File "C:\Users\HP\QR_Attendance_App\venv\Lib\site-packages\rest_framework\renderers.py", line 1055, in __init__
+    assert yaml, 'Using OpenAPIRenderer, but `pyyaml` is not installed.'
+           ^^^^
+AssertionError: Using OpenAPIRenderer, but `pyyaml` is not installed.
+INFO 2026-07-11 20:25:07,324 autoreload 13396 15688 C:\Users\HP\QR_Attendance_App\Backend\qr_attendance_config\urls.py changed, reloading.
+INFO 2026-07-11 20:25:09,214 autoreload 26604 30256 Watching for file changes with StatReloader
+WARNING 2026-07-11 20:27:10,660 log 26604 37488 Not Found: /
+WARNING 2026-07-11 20:27:10,663 basehttp 26604 37488 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-11 20:27:19,651 basehttp 26604 30140 "GET /api/users/me/ HTTP/1.1" 200 326
+INFO 2026-07-11 20:27:19,838 basehttp 26604 30140 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 20:27:19,919 basehttp 26604 23896 "GET /api/courses/ HTTP/1.1" 200 3322
+INFO 2026-07-11 20:27:33,321 basehttp 26604 23896 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-11 20:27:34,414 basehttp 26604 30140 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:27:34,569 basehttp 26604 30140 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:27:34,607 basehttp 26604 23896 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:27:34,632 basehttp 26604 30140 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:27:34,676 basehttp 26604 30140 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:27:34,705 basehttp 26604 23896 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:27:34,808 basehttp 26604 3044 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:27:34,865 basehttp 26604 37896 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:27:34,872 basehttp 26604 30140 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:27:34,900 basehttp 26604 38192 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:34:57,642 basehttp 26604 14872 "OPTIONS /api/courses/4/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:34:57,649 basehttp 26604 22960 "OPTIONS /api/courses/4/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:34:57,665 basehttp 26604 34164 "OPTIONS /api/courses/4/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:34:57,670 basehttp 26604 24992 "OPTIONS /api/courses/4/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-11 20:34:57,701 basehttp 26604 14872 "GET /api/courses/4/ HTTP/1.1" 200 769
+INFO 2026-07-11 20:34:57,710 basehttp 26604 22960 "GET /api/courses/4/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:34:57,863 basehttp 26604 24992 "GET /api/courses/4/ HTTP/1.1" 200 769
+INFO 2026-07-11 20:34:57,869 basehttp 26604 14872 "GET /api/courses/4/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:34:57,914 basehttp 26604 22960 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:34:57,985 basehttp 26604 14872 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:35:06,293 basehttp 26604 22960 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:35:06,351 basehttp 26604 29936 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:35:06,363 basehttp 26604 34164 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:35:06,406 basehttp 26604 22960 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:35:06,407 basehttp 26604 24992 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:35:06,496 basehttp 26604 14872 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:35:06,515 basehttp 26604 34164 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:35:06,529 basehttp 26604 29936 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:35:06,655 basehttp 26604 22960 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:35:06,670 basehttp 26604 24992 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:35:19,406 basehttp 26604 24992 "GET /api/courses/1/ HTTP/1.1" 200 846
+INFO 2026-07-11 20:35:19,487 basehttp 26604 29936 "GET /api/courses/1/ HTTP/1.1" 200 846
+INFO 2026-07-11 20:35:19,533 basehttp 26604 22960 "GET /api/courses/1/lectures/ HTTP/1.1" 200 7320
+INFO 2026-07-11 20:35:19,674 basehttp 26604 29936 "GET /api/courses/1/lectures/ HTTP/1.1" 200 7320
+INFO 2026-07-11 20:35:19,681 basehttp 26604 22960 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:35:19,757 basehttp 26604 29936 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:36:09,068 basehttp 26604 22960 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:36:09,167 basehttp 26604 14872 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:36:09,190 basehttp 26604 22960 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:36:09,235 basehttp 26604 34164 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:36:09,245 basehttp 26604 24992 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:36:09,323 basehttp 26604 29936 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:36:09,341 basehttp 26604 14872 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:36:09,388 basehttp 26604 22960 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:36:09,495 basehttp 26604 34164 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:36:09,496 basehttp 26604 24992 "GET /api/enrollments/ HTTP/1.1" 200 6386
+WARNING 2026-07-11 20:42:33,546 log 4900 27036 Bad Request: /api/auth/register/
+WARNING 2026-07-11 20:42:56,554 log 4900 27036 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:43:09,241 log 4900 27036 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 20:43:15,689 log 4900 27036 Bad Request: /api/attendance/mark_attendance/
+INFO 2026-07-11 20:50:38,496 basehttp 26604 38968 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 20:50:38,688 basehttp 26604 38968 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 20:50:38,707 basehttp 26604 38968 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:50:38,776 basehttp 26604 33796 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:50:38,827 basehttp 26604 38968 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:50:38,873 basehttp 26604 33796 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:50:38,932 basehttp 26604 33796 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 20:50:39,042 basehttp 26604 37488 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 20:50:39,136 basehttp 26604 28304 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 20:50:39,162 basehttp 26604 16612 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 20:50:39,194 basehttp 26604 38968 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:22:55,276 autoreload 26604 30256 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-07-11 21:22:59,665 autoreload 24704 34876 Watching for file changes with StatReloader
+INFO 2026-07-11 21:23:14,446 autoreload 24704 34876 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-11 21:23:17,167 autoreload 33824 24524 Watching for file changes with StatReloader
+INFO 2026-07-11 21:23:55,220 basehttp 33824 37064 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:23:55,377 basehttp 33824 37064 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 21:23:55,430 basehttp 33824 37064 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:23:55,447 basehttp 33824 37064 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:23:55,566 basehttp 33824 13016 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:23:55,584 basehttp 33824 13016 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:23:55,633 basehttp 33824 37064 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:23:55,656 basehttp 33824 37064 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:23:55,672 basehttp 33824 13016 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:23:55,722 basehttp 33824 13016 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:23:55,884 basehttp 33824 13016 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:23:55,892 basehttp 33824 37324 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:23:55,983 basehttp 33824 24752 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:23:56,005 basehttp 33824 18472 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:23:56,012 basehttp 33824 37064 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:23:56,202 basehttp 33824 18472 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:24:11,447 basehttp 33824 18472 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 21:24:12,642 basehttp 33824 13016 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:24:12,655 basehttp 33824 37064 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:24:12,713 basehttp 33824 33100 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:24:12,775 basehttp 33824 13016 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:24:12,785 basehttp 33824 24752 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:24:12,810 basehttp 33824 37324 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:24:12,936 basehttp 33824 24752 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:24:12,957 basehttp 33824 13016 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:24:12,958 basehttp 33824 18472 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:24:13,055 basehttp 33824 24752 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:24:42,027 basehttp 33824 24752 "GET /api/users/me/ HTTP/1.1" 200 309
+INFO 2026-07-11 21:24:42,364 basehttp 33824 13016 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:24:42,450 basehttp 33824 37064 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:24:42,460 basehttp 33824 37324 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:24:42,485 basehttp 33824 33100 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:24:42,585 basehttp 33824 24752 "GET /api/enrollments/ HTTP/1.1" 200 6386
+INFO 2026-07-11 21:24:42,595 basehttp 33824 18472 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:24:42,605 basehttp 33824 37064 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:24:42,682 basehttp 33824 37324 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:24:42,764 basehttp 33824 24752 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:24:42,785 basehttp 33824 33100 "GET /api/enrollments/ HTTP/1.1" 200 6386
+WARNING 2026-07-11 21:28:08,068 log 35896 35816 Bad Request: /api/auth/register/
+WARNING 2026-07-11 21:28:11,545 log 35896 35816 Bad Request: /api/auth/register/
+WARNING 2026-07-11 21:28:26,284 log 35896 35816 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:28:30,595 log 35896 35816 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:28:39,495 log 35896 35816 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:28:43,990 log 35896 35816 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:29:10,408 log 28312 30604 Bad Request: /api/auth/register/
+WARNING 2026-07-11 21:29:14,485 log 28312 30604 Bad Request: /api/auth/register/
+WARNING 2026-07-11 21:29:32,006 log 28312 30604 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:29:46,708 log 28312 30604 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:29:51,207 log 28312 30604 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-11 21:33:33,595 log 33824 11612 Unauthorized: /api/users/me/
+WARNING 2026-07-11 21:33:33,597 basehttp 33824 11612 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-11 21:35:05,308 basehttp 33824 11612 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-11 21:35:07,402 basehttp 33824 11612 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-11 21:35:08,116 basehttp 33824 11612 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-11 21:35:08,135 basehttp 33824 11612 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:35:08,198 basehttp 33824 11612 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:35:08,230 basehttp 33824 11612 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:35:08,327 basehttp 33824 11612 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:35:08,332 basehttp 33824 17260 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:35:08,475 basehttp 33824 31312 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:35:08,483 basehttp 33824 11612 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:35:08,494 basehttp 33824 29144 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:35:08,543 basehttp 33824 16068 "GET /api/enrollments/ HTTP/1.1" 200 6391
+WARNING 2026-07-11 21:46:20,309 log 33824 35172 Not Found: /
+WARNING 2026-07-11 21:46:20,311 basehttp 33824 35172 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-11 21:46:30,427 basehttp 33824 19812 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-11 21:46:30,623 basehttp 33824 19812 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-11 21:46:30,641 basehttp 33824 19812 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:46:30,730 basehttp 33824 34512 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:46:30,755 basehttp 33824 19812 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-11 21:46:30,825 basehttp 33824 34512 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:46:30,891 basehttp 33824 34512 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-11 21:46:30,919 basehttp 33824 36968 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-11 21:46:31,030 basehttp 33824 19812 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-11 21:46:31,038 basehttp 33824 39644 "GET /api/lectures/upcoming/ HTTP/1.1" 200 3245
+INFO 2026-07-11 21:46:31,050 basehttp 33824 37344 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+WARNING 2026-07-12 08:26:06,139 log 33824 40332 Not Found: /
+WARNING 2026-07-12 08:26:06,142 basehttp 33824 40332 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-12 08:26:11,570 basehttp 33824 30244 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+WARNING 2026-07-12 08:26:11,590 log 33824 30244 Unauthorized: /api/users/me/
+WARNING 2026-07-12 08:26:11,592 basehttp 33824 30244 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-12 08:29:42,529 basehttp 33824 30244 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,408 basehttp 33824 30244 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-12 08:29:43,690 basehttp 33824 30244 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,707 basehttp 33824 30244 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,725 basehttp 33824 30244 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,742 basehttp 33824 30244 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,756 basehttp 33824 30244 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,761 basehttp 33824 30244 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,766 basehttp 33824 30244 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,770 basehttp 33824 30244 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,774 basehttp 33824 30244 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,778 basehttp 33824 30244 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-12 08:29:43,859 basehttp 33824 30244 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:29:43,874 basehttp 33824 30244 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:29:43,918 basehttp 33824 30244 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:29:43,941 basehttp 33824 30244 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:29:43,953 basehttp 33824 30244 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:29:44,027 basehttp 33824 40788 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:29:44,056 basehttp 33824 40912 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:29:44,106 basehttp 33824 31360 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:29:44,127 basehttp 33824 30244 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:29:44,148 basehttp 33824 6268 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:46:31,882 basehttp 33824 35104 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 08:48:16,043 basehttp 33824 35104 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 08:48:16,326 basehttp 33824 35104 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:48:16,346 basehttp 33824 35104 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:48:16,446 basehttp 33824 35104 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:48:16,475 basehttp 33824 35104 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:48:16,494 basehttp 33824 35104 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:48:16,572 basehttp 33824 28508 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:48:16,628 basehttp 33824 37984 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:48:16,670 basehttp 33824 30000 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:48:16,675 basehttp 33824 12840 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:48:16,695 basehttp 33824 35104 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:52:39,274 basehttp 33824 35104 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 08:52:39,467 basehttp 33824 28508 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:52:39,506 basehttp 33824 12840 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:52:39,539 basehttp 33824 28508 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:52:39,560 basehttp 33824 12840 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:52:39,583 basehttp 33824 37984 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:52:39,630 basehttp 33824 12840 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:52:39,650 basehttp 33824 30000 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:52:39,677 basehttp 33824 35104 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:52:39,737 basehttp 33824 12840 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:52:39,779 basehttp 33824 30000 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:54:58,654 basehttp 33824 11508 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 08:54:58,834 basehttp 33824 11508 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:54:58,852 basehttp 33824 11508 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:54:58,934 basehttp 33824 27176 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:54:58,948 basehttp 33824 11508 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 08:54:58,964 basehttp 33824 27176 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:54:59,012 basehttp 33824 27176 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:54:59,078 basehttp 33824 36088 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 08:54:59,117 basehttp 33824 8020 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 08:54:59,184 basehttp 33824 11508 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 08:54:59,187 basehttp 33824 27176 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:03:53,665 basehttp 33824 24208 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 09:03:53,840 basehttp 33824 24208 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 09:03:53,861 basehttp 33824 24208 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:03:53,932 basehttp 33824 24208 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:03:53,942 basehttp 33824 15796 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 09:03:53,955 basehttp 33824 24208 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:03:53,989 basehttp 33824 24208 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:03:54,114 basehttp 33824 15796 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 09:03:54,136 basehttp 33824 24208 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:03:54,149 basehttp 33824 40236 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:03:54,156 basehttp 33824 1820 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 09:04:26,905 basehttp 33824 1820 "OPTIONS /api/courses/4/ HTTP/1.1" 200 0
+INFO 2026-07-12 09:04:26,905 basehttp 33824 24208 "OPTIONS /api/courses/4/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 09:04:26,905 basehttp 33824 15796 "OPTIONS /api/courses/4/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 09:04:26,906 basehttp 33824 40236 "OPTIONS /api/courses/4/ HTTP/1.1" 200 0
+INFO 2026-07-12 09:04:26,956 basehttp 33824 24208 "GET /api/courses/4/ HTTP/1.1" 200 769
+INFO 2026-07-12 09:04:26,976 basehttp 33824 40236 "GET /api/courses/4/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:27,004 basehttp 33824 24208 "GET /api/courses/4/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:27,004 basehttp 33824 1820 "GET /api/courses/4/ HTTP/1.1" 200 769
+INFO 2026-07-12 09:04:27,065 basehttp 33824 24208 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:04:27,123 basehttp 33824 1820 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:04:30,942 basehttp 33824 624 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:30,943 basehttp 33824 24208 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:30,970 basehttp 33824 15796 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 09:04:30,978 basehttp 33824 37708 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:31,000 basehttp 33824 624 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:04:31,040 basehttp 33824 24208 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 764
+INFO 2026-07-12 09:04:31,065 basehttp 33824 40236 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:04:31,095 basehttp 33824 1820 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 09:04:31,146 basehttp 33824 24208 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1218
+INFO 2026-07-12 09:04:31,209 basehttp 33824 40236 "GET /api/enrollments/ HTTP/1.1" 200 6391
+INFO 2026-07-12 09:09:30,898 basehttp 33824 40236 "OPTIONS /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester=&academic_year= HTTP/1.1" 200 0
+INFO 2026-07-12 09:09:30,913 basehttp 33824 40236 "GET /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester=&academic_year= HTTP/1.1" 200 2
+INFO 2026-07-12 09:09:32,337 basehttp 33824 40236 "GET /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester=&academic_year= HTTP/1.1" 200 2
+INFO 2026-07-12 09:09:33,107 basehttp 33824 40236 "GET /api/courses/available_for_enrollment/?search=&department=&lecturer=&semester=&academic_year= HTTP/1.1" 200 2
+WARNING 2026-07-12 09:37:31,501 log 33824 29912 Unauthorized: /api/users/me/
+WARNING 2026-07-12 09:37:31,503 basehttp 33824 29912 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-12 09:37:41,246 basehttp 33824 29912 "POST /api/auth/login/ HTTP/1.1" 200 609
+INFO 2026-07-12 09:37:41,612 basehttp 33824 22100 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:37:41,735 basehttp 33824 29912 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:37:41,736 basehttp 33824 22100 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:37:41,761 basehttp 33824 22100 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:37:41,770 basehttp 33824 29912 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 779
+INFO 2026-07-12 09:37:41,781 basehttp 33824 22100 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:37:41,879 basehttp 33824 22100 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:37:41,911 basehttp 33824 40280 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:37:41,925 basehttp 33824 29912 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:37:41,930 basehttp 33824 40700 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 779
+INFO 2026-07-12 09:41:20,071 basehttp 33824 40700 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 09:41:20,345 basehttp 33824 29912 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:41:20,421 basehttp 33824 22100 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 824
+INFO 2026-07-12 09:41:20,436 basehttp 33824 29912 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:41:20,439 basehttp 33824 40280 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:41:20,488 basehttp 33824 22100 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:41:20,491 basehttp 33824 40700 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:41:20,491 basehttp 33824 40280 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:41:20,522 basehttp 33824 29912 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 824
+INFO 2026-07-12 09:41:20,672 basehttp 33824 40700 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:41:20,672 basehttp 33824 22100 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:46:06,390 basehttp 33824 40700 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 09:46:06,753 basehttp 33824 40280 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 09:46:06,776 basehttp 33824 22100 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:46:06,795 basehttp 33824 40280 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:46:06,847 basehttp 33824 40280 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:46:06,866 basehttp 33824 40700 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:46:06,882 basehttp 33824 40280 "GET /api/lectures/upcoming/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:46:06,942 basehttp 33824 22100 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 09:46:06,977 basehttp 33824 29912 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:46:06,999 basehttp 33824 40700 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:46:07,049 basehttp 33824 22100 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+WARNING 2026-07-12 09:46:08,139 log 33824 15048 Not Found: /
+WARNING 2026-07-12 09:46:08,141 basehttp 33824 15048 "GET / HTTP/1.1" 404 3105
+WARNING 2026-07-12 09:46:13,568 log 33824 15048 Not Found: /
+WARNING 2026-07-12 09:46:13,569 basehttp 33824 15048 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-12 09:50:38,234 basehttp 33824 22100 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 09:50:38,467 basehttp 33824 40700 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:50:38,490 basehttp 33824 40280 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 09:50:38,607 basehttp 33824 40280 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 09:50:38,674 basehttp 33824 40280 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 09:50:38,704 basehttp 33824 29912 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:50:38,717 basehttp 33824 40700 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7300
+INFO 2026-07-12 09:50:38,755 basehttp 33824 22100 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 09:50:38,834 basehttp 33824 40280 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 09:50:38,909 basehttp 33824 29912 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7300
+INFO 2026-07-12 09:50:38,915 basehttp 33824 40700 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 10:02:33,847 basehttp 33824 3160 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 10:02:34,088 basehttp 33824 37192 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:02:34,205 basehttp 33824 3160 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 10:02:34,213 basehttp 33824 37192 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:02:34,246 basehttp 33824 3160 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:02:34,275 basehttp 33824 3160 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:02:34,366 basehttp 33824 37192 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7300
+INFO 2026-07-12 10:02:34,386 basehttp 33824 10060 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:02:34,445 basehttp 33824 35492 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:02:34,501 basehttp 33824 3160 "GET /api/enrollments/ HTTP/1.1" 200 6441
+INFO 2026-07-12 10:02:34,531 basehttp 33824 38900 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7300
+INFO 2026-07-12 10:02:37,836 basehttp 33824 38900 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 10:07:43,453 autoreload 33824 24524 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-07-12 10:07:45,156 autoreload 2004 37384 Watching for file changes with StatReloader
+INFO 2026-07-12 10:08:36,224 basehttp 2004 20128 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 10:10:20,343 basehttp 2004 20128 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 10:10:34,643 basehttp 2004 20128 "GET /api/users/me/ HTTP/1.1" 200 310
+INFO 2026-07-12 10:14:27,720 autoreload 2004 37384 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-07-12 10:14:29,227 autoreload 40704 26204 Watching for file changes with StatReloader
+INFO 2026-07-12 10:16:17,709 autoreload 40704 26204 C:\Users\HP\QR_Attendance_App\Backend\accounts\serializers.py changed, reloading.
+INFO 2026-07-12 10:16:18,922 autoreload 1820 37984 Watching for file changes with StatReloader
+INFO 2026-07-12 10:16:34,437 basehttp 1820 23028 "GET /api/users/me/ HTTP/1.1" 200 331
+INFO 2026-07-12 10:16:47,059 basehttp 1820 23028 "GET /api/users/me/ HTTP/1.1" 200 331
+INFO 2026-07-12 10:18:33,147 basehttp 1820 23028 "GET /api/users/me/ HTTP/1.1" 200 331
+INFO 2026-07-12 10:21:55,934 basehttp 1820 23028 "GET /api/users/me/ HTTP/1.1" 200 331
+INFO 2026-07-12 10:43:45,757 basehttp 1820 34428 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+WARNING 2026-07-12 10:43:45,769 log 1820 34428 Unauthorized: /api/users/me/
+WARNING 2026-07-12 10:43:45,773 basehttp 1820 34428 "GET /api/users/me/ HTTP/1.1" 401 183
+WARNING 2026-07-12 10:43:49,599 log 1820 2520 Not Found: /
+WARNING 2026-07-12 10:43:49,601 basehttp 1820 2520 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-12 10:43:56,377 basehttp 1820 34428 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:57,516 basehttp 1820 34428 "POST /api/auth/login/ HTTP/1.1" 200 746
+INFO 2026-07-12 10:43:58,114 basehttp 1820 27504 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,120 basehttp 1820 34428 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,128 basehttp 1820 27504 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,142 basehttp 1820 27504 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,143 basehttp 1820 34428 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,149 basehttp 1820 27504 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,159 basehttp 1820 27504 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,160 basehttp 1820 34428 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,164 basehttp 1820 27504 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,167 basehttp 1820 34428 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:43:58,221 basehttp 1820 27504 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:43:58,377 basehttp 1820 27504 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:43:58,387 basehttp 1820 34428 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:43:58,468 basehttp 1820 32700 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:43:58,480 basehttp 1820 34428 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:43:58,597 basehttp 1820 32700 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:43:58,609 basehttp 1820 16756 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:43:58,624 basehttp 1820 27504 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:43:58,645 basehttp 1820 34680 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:43:58,712 basehttp 1820 16756 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:44:08,897 basehttp 1820 16756 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 10:44:16,748 basehttp 1820 16756 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 10:44:50,668 basehttp 1820 16756 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 10:44:50,859 basehttp 1820 34680 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:44:50,903 basehttp 1820 36468 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:44:50,908 basehttp 1820 32700 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:44:50,945 basehttp 1820 16756 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:44:51,042 basehttp 1820 34680 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:44:51,052 basehttp 1820 27504 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:44:51,141 basehttp 1820 34428 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:44:51,218 basehttp 1820 32700 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:44:51,250 basehttp 1820 34680 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:44:51,298 basehttp 1820 27504 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:45:11,943 basehttp 1820 27504 "OPTIONS /api/attendance/my_scan_history/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:45:11,944 basehttp 1820 34680 "OPTIONS /api/attendance/my_scan_history/ HTTP/1.1" 200 0
+INFO 2026-07-12 10:45:12,034 basehttp 1820 34680 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 6999
+INFO 2026-07-12 10:45:12,101 basehttp 1820 27504 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 6999
+INFO 2026-07-12 10:45:39,436 basehttp 1820 27504 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 10:45:43,524 basehttp 1820 27504 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 10:45:43,790 basehttp 1820 34680 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:45:43,930 basehttp 1820 36468 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 10:45:43,974 basehttp 1820 34428 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:45:44,063 basehttp 1820 36468 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 10:45:44,099 basehttp 1820 16756 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:45:44,130 basehttp 1820 32700 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:45:44,159 basehttp 1820 27504 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:45:44,250 basehttp 1820 16756 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 10:45:44,266 basehttp 1820 36468 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 10:45:44,328 basehttp 1820 32700 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 10:52:04,030 autoreload 1820 37984 C:\Users\HP\QR_Attendance_App\Backend\attendance\serializers.py changed, reloading.
+INFO 2026-07-12 10:52:05,976 autoreload 36536 35372 Watching for file changes with StatReloader
+WARNING 2026-07-12 11:12:06,286 log 36536 34340 Not Found: /
+WARNING 2026-07-12 11:12:06,287 basehttp 36536 34340 "GET / HTTP/1.1" 404 3105
+INFO 2026-07-12 11:12:13,035 basehttp 36536 17640 "GET /api/users/me/ HTTP/1.1" 200 356
+INFO 2026-07-12 11:12:13,150 basehttp 36536 17640 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 11:12:13,168 basehttp 36536 17640 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 11:12:13,262 basehttp 36536 19448 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 11:12:13,264 basehttp 36536 17640 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 11:12:13,430 basehttp 36536 19448 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 11:12:13,430 basehttp 36536 36084 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 11:12:13,465 basehttp 36536 14692 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 11:12:13,465 basehttp 36536 17640 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 11:12:13,518 basehttp 36536 40008 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 11:12:13,558 basehttp 36536 33088 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 11:12:28,791 basehttp 36536 33088 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 7080
+INFO 2026-07-12 11:12:28,958 basehttp 36536 40008 "GET /api/attendance/my_scan_history/ HTTP/1.1" 200 7080
+INFO 2026-07-12 11:12:42,821 basehttp 36536 33088 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 11:12:42,839 basehttp 36536 14692 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 11:12:42,868 basehttp 36536 36084 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 2
+INFO 2026-07-12 11:12:42,908 basehttp 36536 33088 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-12 11:12:42,963 basehttp 36536 17640 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 11:12:42,970 basehttp 36536 40008 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 11:12:42,985 basehttp 36536 19448 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+INFO 2026-07-12 11:12:43,102 basehttp 36536 33088 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-12 11:12:43,119 basehttp 36536 17640 "GET /api/enrollments/ HTTP/1.1" 200 6776
+INFO 2026-07-12 11:12:43,128 basehttp 36536 40008 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7405
+WARNING 2026-07-12 12:02:04,051 log 36536 40884 Not Found: /
+WARNING 2026-07-12 12:02:04,054 basehttp 36536 40884 "GET / HTTP/1.1" 404 3105
+WARNING 2026-07-12 12:02:15,563 log 36536 14136 Unauthorized: /api/users/me/
+WARNING 2026-07-12 12:02:15,566 basehttp 36536 14136 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-12 12:02:25,576 basehttp 36536 14136 "POST /api/auth/login/ HTTP/1.1" 200 758
+INFO 2026-07-12 12:02:26,510 basehttp 36536 14136 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:02:26,520 basehttp 36536 22156 "OPTIONS /api/courses/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:02:26,596 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:02:26,611 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:02:54,507 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:02:54,525 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:03:41,001 basehttp 36536 22156 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:03:41,304 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:03:41,340 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:04:53,413 basehttp 36536 14136 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:05:08,820 basehttp 36536 14136 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:05:19,680 basehttp 36536 14136 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:05:22,414 basehttp 36536 14136 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:05:22,579 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:05:22,616 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 52
+INFO 2026-07-12 12:07:26,727 basehttp 36536 22156 "POST /api/courses/ HTTP/1.1" 201 807
+INFO 2026-07-12 12:07:54,065 basehttp 36536 22156 "OPTIONS /api/courses/7/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:07:54,070 basehttp 36536 14136 "OPTIONS /api/courses/7/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:07:54,091 basehttp 36536 22156 "OPTIONS /api/courses/7/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:07:54,103 basehttp 36536 14136 "OPTIONS /api/courses/7/lectures/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:07:54,242 basehttp 36536 14136 "GET /api/courses/7/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:07:54,256 basehttp 36536 22156 "GET /api/courses/7/ HTTP/1.1" 200 807
+INFO 2026-07-12 12:07:54,300 basehttp 36536 14136 "GET /api/courses/7/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:07:54,316 basehttp 36536 22156 "GET /api/courses/7/ HTTP/1.1" 200 807
+INFO 2026-07-12 12:07:54,320 basehttp 36536 14136 "OPTIONS /api/courses/7/students/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:07:54,355 basehttp 36536 14136 "GET /api/courses/7/students/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:07:54,382 basehttp 36536 22156 "GET /api/courses/7/students/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:08:05,034 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:08:05,091 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:09:48,363 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:09:48,393 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:09:51,904 basehttp 36536 22156 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:09:51,937 basehttp 36536 14136 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:13:23,859 autoreload 36536 35372 C:\Users\HP\QR_Attendance_App\Backend\qr_attendance_config\urls.py changed, reloading.
+INFO 2026-07-12 12:13:29,912 autoreload 40276 31140 Watching for file changes with StatReloader
+INFO 2026-07-12 12:25:02,017 basehttp 40276 28652 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:25:02,165 basehttp 40276 28652 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:25:02,197 basehttp 40276 40768 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:25:25,127 basehttp 40276 40768 "GET /api/courses/7/ HTTP/1.1" 200 807
+INFO 2026-07-12 12:25:25,154 basehttp 40276 28652 "GET /api/courses/7/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:25:25,219 basehttp 40276 40768 "GET /api/courses/7/ HTTP/1.1" 200 807
+INFO 2026-07-12 12:25:25,268 basehttp 40276 40768 "GET /api/courses/7/students/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:25:25,285 basehttp 40276 28652 "GET /api/courses/7/lectures/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:25:25,353 basehttp 40276 28652 "GET /api/courses/7/students/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:25:27,357 basehttp 40276 28652 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:25:27,398 basehttp 40276 40768 "GET /api/courses/ HTTP/1.1" 200 859
+INFO 2026-07-12 12:32:59,898 autoreload 40276 31140 C:\Users\HP\QR_Attendance_App\Backend\courses\serializers.py changed, reloading.
+INFO 2026-07-12 12:33:01,666 autoreload 10776 14612 Watching for file changes with StatReloader
+INFO 2026-07-12 12:56:01,880 basehttp 10776 36460 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:56:02,088 basehttp 10776 36460 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:56:02,240 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:56:02,278 basehttp 10776 40024 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:56:26,050 basehttp 10776 40024 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:56:26,299 basehttp 10776 40024 "OPTIONS /api/lectures/qr_sessions/ HTTP/1.1" 200 0
+INFO 2026-07-12 12:56:26,373 basehttp 10776 40024 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:56:34,393 basehttp 10776 40024 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:56:34,570 basehttp 10776 40024 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:56:34,610 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:56:54,978 basehttp 10776 36460 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:56:55,272 basehttp 10776 40024 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:56:55,360 basehttp 10776 40024 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:56:55,384 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:56:55,432 basehttp 10776 40024 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:06,889 basehttp 10776 40024 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:57:07,352 basehttp 10776 40024 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:07,453 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:12,021 basehttp 10776 40024 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:57:12,051 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:12,052 basehttp 10776 6256 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 12:57:12,110 basehttp 10776 6256 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:15,572 basehttp 10776 6256 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 12:57:15,736 basehttp 10776 6256 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 12:57:15,779 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:00:08,056 basehttp 10776 36460 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 13:00:08,183 basehttp 10776 36460 "GET /api/lectures/qr_sessions/ HTTP/1.1" 200 2
+INFO 2026-07-12 13:00:16,280 basehttp 10776 36460 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2026-07-12 13:00:16,445 basehttp 10776 36460 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:00:16,496 basehttp 10776 6256 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:01:58,331 autoreload 10776 14612 C:\Users\HP\QR_Attendance_App\Backend\courses\views.py changed, reloading.
+INFO 2026-07-12 13:01:59,939 autoreload 11024 33060 Watching for file changes with StatReloader
+WARNING 2026-07-12 13:22:16,455 log 11024 28152 Unauthorized: /api/users/me/
+WARNING 2026-07-12 13:22:16,458 basehttp 11024 28152 "GET /api/users/me/ HTTP/1.1" 401 183
+INFO 2026-07-12 13:22:29,279 basehttp 11024 28152 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-12 13:22:31,200 basehttp 11024 28152 "POST /api/auth/login/ HTTP/1.1" 200 758
+INFO 2026-07-12 13:22:31,633 basehttp 11024 28152 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:22:31,673 basehttp 11024 29012 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:22:47,409 basehttp 11024 29012 "OPTIONS /api/lectures/qr_sessions/?course_id=7 HTTP/1.1" 200 0
+INFO 2026-07-12 13:22:47,442 basehttp 11024 29012 "OPTIONS /api/lectures/qr_sessions/?course_id=7 HTTP/1.1" 200 0
+INFO 2026-07-12 13:22:47,461 basehttp 11024 28152 "GET /api/courses/7/ HTTP/1.1" 200 852
+INFO 2026-07-12 13:22:47,518 basehttp 11024 29012 "GET /api/lectures/qr_sessions/?course_id=7 HTTP/1.1" 200 2
+INFO 2026-07-12 13:22:47,573 basehttp 11024 29012 "GET /api/lectures/qr_sessions/?course_id=7 HTTP/1.1" 200 2
+INFO 2026-07-12 13:22:47,576 basehttp 11024 28152 "GET /api/courses/7/ HTTP/1.1" 200 852
+INFO 2026-07-12 13:22:54,648 basehttp 11024 28152 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-12 13:22:54,689 basehttp 11024 29012 "GET /api/courses/ HTTP/1.1" 200 904
+INFO 2026-07-17 12:51:00,330 autoreload 26776 30636 Watching for file changes with StatReloader
+INFO 2026-07-17 12:59:23,301 autoreload 33888 27740 Watching for file changes with StatReloader
+WARNING 2026-07-17 12:59:35,175 log 33888 15236 Not Found: /
+WARNING 2026-07-17 12:59:35,176 basehttp 33888 15236 "GET / HTTP/1.1" 404 3105
+WARNING 2026-07-17 12:59:38,139 log 33888 15236 Not Found: /favicon.ico
+WARNING 2026-07-17 12:59:38,141 basehttp 33888 15236 "GET /favicon.ico HTTP/1.1" 404 3156
+INFO 2026-07-17 12:59:49,298 basehttp 33888 30056 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:51,214 basehttp 33888 30056 "POST /api/auth/login/ HTTP/1.1" 200 746
+INFO 2026-07-17 12:59:52,290 basehttp 33888 31564 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,298 basehttp 33888 30056 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,303 basehttp 33888 31564 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,326 basehttp 33888 31564 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,361 basehttp 33888 31564 "OPTIONS /api/enrollments/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,378 basehttp 33888 30056 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,401 basehttp 33888 31564 "OPTIONS /api/courses/available_for_enrollment/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,422 basehttp 33888 31564 "OPTIONS /api/attendance/missed_lectures/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,436 basehttp 33888 31564 "OPTIONS /api/lectures/upcoming/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,466 basehttp 33888 30056 "OPTIONS /api/attendance/my_course_summary/ HTTP/1.1" 200 0
+INFO 2026-07-17 12:59:52,799 basehttp 33888 31564 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 854
+INFO 2026-07-17 12:59:52,981 basehttp 33888 8500 "GET /api/courses/available_for_enrollment/ HTTP/1.1" 200 854
+INFO 2026-07-17 12:59:53,014 basehttp 33888 22292 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-17 12:59:53,145 basehttp 33888 25484 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-17 12:59:53,165 basehttp 33888 31564 "GET /api/attendance/my_course_summary/ HTTP/1.1" 200 1261
+INFO 2026-07-17 12:59:53,243 basehttp 33888 22292 "GET /api/attendance/missed_lectures/ HTTP/1.1" 200 813
+INFO 2026-07-17 12:59:53,564 basehttp 33888 26164 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7632
+INFO 2026-07-17 12:59:53,594 basehttp 33888 30056 "GET /api/enrollments/ HTTP/1.1" 200 7003
+INFO 2026-07-17 12:59:53,820 basehttp 33888 22292 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7632
+INFO 2026-07-17 12:59:53,918 basehttp 33888 26164 "GET /api/enrollments/ HTTP/1.1" 200 7003

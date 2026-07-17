@@ -1,49 +1,46 @@
-/* components/student/ActivityFeed.module.css */
-
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .title {
+  color: var(--color-text);
   font-size: 18px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .item {
   display: flex;
-  gap: 15px;
-  padding: 15px;
-  border-left: 3px solid #ecf0f1;
+  gap: 14px;
+  padding: 16px;
+  border-left: 3px solid var(--color-border);
 }
 
 .item:not(:last-child) {
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .item.success {
-  border-left-color: #4caf50;
-  background: rgba(76, 175, 80, 0.05);
+  border-left-color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 8%, transparent);
 }
 
 .item.info {
-  border-left-color: #2196f3;
-  background: rgba(33, 150, 243, 0.05);
+  border-left-color: var(--color-info);
+  background: color-mix(in srgb, var(--color-info) 8%, transparent);
 }
 
 .item.warning {
-  border-left-color: #ff9800;
-  background: rgba(255, 152, 0, 0.05);
+  border-left-color: var(--color-warning);
+  background: color-mix(in srgb, var(--color-warning) 10%, transparent);
 }
 
 .iconWrapper {
@@ -57,22 +54,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  background: var(--color-surface-solid);
 }
 
 .item.success .icon {
-  background: #d4edda;
-  color: #155724;
+  color: var(--color-success);
 }
 
 .item.info .icon {
-  background: #d1ecf1;
-  color: #0c5460;
+  color: var(--color-info);
 }
 
 .item.warning .icon {
-  background: #fff3cd;
-  color: #856404;
+  color: var(--color-warning);
 }
 
 .content {
@@ -80,19 +74,20 @@
 }
 
 .itemTitle {
+  color: var(--color-text);
   font-size: 15px;
-  color: #2c3e50;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 3px;
 }
 
 .itemDescription {
+  color: var(--color-text-muted);
   font-size: 13px;
-  color: #7f8c8d;
   margin-bottom: 3px;
 }
 
 .itemTime {
+  color: var(--color-text-soft);
   font-size: 12px;
-  color: #95a5a6;
+  font-weight: 650;
 }

@@ -4,7 +4,7 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { User, AuthContextType } from '@/types/index';
-import { getMockData } from '@/utils/mockData';
+import { authService } from '@/services/authService';
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -27,17 +27,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       try {
         const token = localStorage.getItem('auth_token');
         if (token) {
-          // In production, fetch user from API
-          // const response = await authService.getCurrentUser();
-          // setUser(response.data);
-          
-          // For now, restore the mock user selected during login.
-          const storedUser = localStorage.getItem('auth_user');
-          const mockUser = storedUser
-            ? JSON.parse(storedUser) as User
-            : getMockData.getCurrentUser();
-
-          setUser(mockUser);
+          const response = await authService.getCurrentUser();
+          const currentUser = response.data ?? response as unknown as User;
+          setUser(currentUser);
+          localStorage.setItem('auth_user', JSON.stringify(currentUser));
           setIsAuthenticated(true);
         }
       } catch (error) {
@@ -55,21 +48,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = useCallback(async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      // In production, use actual API
-      // const response = await authService.login(email, password);
-      // setUser(response.user);
-      
-      // For now, use mock login
-      if (email && password) {
-        const lowerEmail = email.toLowerCase();
-        const mockUser = lowerEmail.includes('lecturer') || lowerEmail.includes('dr.')
-          ? getMockData.getLecturerUser()
-          : getMockData.getCurrentUser();
-        localStorage.setItem('auth_token', 'mock_token_' + Date.now());
-        localStorage.setItem('auth_user', JSON.stringify(mockUser));
-        setUser(mockUser);
-        setIsAuthenticated(true);
-      }
+      setUser(null);
+      setIsAuthenticated(false);
+      authService.logout();
+      const response = await authService.login(email, password);
+      setUser(response.user);
+      setIsAuthenticated(true);
     } catch (error) {
       setIsAuthenticated(false);
       throw error;
@@ -81,19 +65,25 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const logout = useCallback(() => {
     setUser(null);
     setIsAuthenticated(false);
-    localStorage.removeItem('auth_token');
-    localStorage.removeItem('auth_user');
+    authService.logout();
   }, []);
 
-  const register = useCallback(async (data: any) => {
+  const updateUser = useCallback((updatedUser: User) => {
+    setUser(updatedUser);
+    localStorage.setItem('auth_user', JSON.stringify(updatedUser));
+  }, []);
+
+  const register = useCallback(async (data: Record<string, unknown>) => {
     setIsLoading(true);
     try {
-      // In production, use actual API
-      // const response = await authService.register(data);
-      // return response;
-      
-      console.log('Register with:', data);
+      setUser(null);
+      setIsAuthenticated(false);
+      authService.logout();
+      const response = await authService.register(data);
+      setUser(response.user);
+      setIsAuthenticated(true);
     } catch (error) {
+      setIsAuthenticated(false);
       throw error;
     } finally {
       setIsLoading(false);
@@ -106,7 +96,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     isAuthenticated,
     login,
     logout,
-    register
+    register,
+    updateUser
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

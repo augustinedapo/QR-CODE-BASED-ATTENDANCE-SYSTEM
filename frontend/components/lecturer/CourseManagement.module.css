@@ -1,36 +1,78 @@
-/* components/lecturer/CourseManagement.module.css */
-
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
 }
 
 .title {
+  color: var(--color-text);
   font-size: 22px;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.createToggle {
+  min-height: 42px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+}
+
+.formCard {
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 18px;
+}
+
+.formTitle {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 850;
+  margin-bottom: 18px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .coursesContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .courseCard {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background: white;
-  border-left: 4px solid #11998e;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.courseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .courseHeader {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 20px;
-  gap: 15px;
 }
 
 .courseInfo {
@@ -38,21 +80,25 @@
 }
 
 .courseName {
+  color: var(--color-text);
   font-size: 18px;
-  font-weight: 600;
-  color: #2c3e50;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
 .courseDetails {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
 }
 
 .detail {
-  font-size: 14px;
-  color: #7f8c8d;
+  color: var(--color-text-muted);
+  background: var(--color-muted);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 650;
 }
 
 .courseActions {
@@ -62,50 +108,61 @@
 }
 
 .actionIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  border: none;
-  background: white;
-  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-solid);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
 }
 
 .actionIcon:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.dangerIcon {
+  color: var(--color-danger);
+}
+
+.dangerIcon:hover {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #ffffff;
 }
 
 .courseStats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #ecf0f1;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
 }
 
 .stat {
   text-align: center;
   padding: 15px;
-  background: #f8f9fa;
-  border-radius: 10px;
+  background: var(--color-muted);
+  border-radius: var(--radius-sm);
 }
 
 .statValue {
+  color: var(--color-primary);
   font-size: 20px;
-  font-weight: bold;
-  color: #11998e;
+  font-weight: 850;
   margin-bottom: 5px;
 }
 
 .statLabel {
+  color: var(--color-text-muted);
   font-size: 12px;
-  color: #7f8c8d;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -113,12 +170,24 @@
     flex-direction: column;
   }
 
-  .courseDetails {
+  .sectionHeader {
+    align-items: flex-start;
     flex-direction: column;
+  }
+
+  .courseActions {
+    width: 100%;
+  }
+
+  .actionIcon {
+    flex: 1;
+  }
+
+  .courseDetails {
     gap: 8px;
   }
 
   .courseStats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

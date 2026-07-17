@@ -1,0 +1,153 @@
+.chartSection {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 54%),
+    var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  padding: 24px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.chartHeader h2 {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 850;
+  margin-bottom: 5px;
+}
+
+.chartHeader p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.chartBadge {
+  align-items: flex-end;
+  background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface-solid));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 32%, var(--color-border));
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  min-width: 92px;
+  padding: 10px 12px;
+}
+
+.chartBadge span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.chartBadge strong {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.chartFrame {
+  height: 280px;
+}
+
+.grid line {
+  stroke: color-mix(in srgb, var(--color-border) 58%, transparent);
+}
+
+.axis text {
+  fill: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.tooltip {
+  background: var(--color-surface-solid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  min-width: 180px;
+  padding: 12px;
+}
+
+.tooltipHeader {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tooltipHeader strong {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.tooltipDot {
+  border-radius: 999px;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.tooltipValue {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.tooltipMeta {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.tooltipMeta span {
+  background: var(--color-muted);
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 750;
+  padding: 6px 8px;
+}
+
+.emptyState {
+  align-items: center;
+  background: var(--color-muted);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 180px;
+  padding: 22px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .chartSection {
+    padding: 18px;
+  }
+
+  .chartHeader h2 {
+    font-size: 19px;
+  }
+
+  .chartHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chartBadge {
+    align-items: flex-start;
+    width: 100%;
+  }
+}

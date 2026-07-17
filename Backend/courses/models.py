@@ -100,6 +100,13 @@ class Enrollment(models.Model):
 
 
 class Lecture(models.Model):
+    QR_STATUS_CHOICES = (
+        ('pending', 'Pending'),
+        ('active', 'Active'),
+        ('closed', 'Closed'),
+        ('expired', 'Expired'),
+    )
+
     lecture_id = models.AutoField(primary_key=True)
     course = models.ForeignKey(
         Course,
@@ -135,6 +142,20 @@ class Lecture(models.Model):
     qr_code_data = models.TextField(blank=True, null=True)
     qr_generated_at = models.DateTimeField(blank=True, null=True)
     qr_expiry_minutes = models.IntegerField(default=10)
+    qr_status = models.CharField(
+        max_length=20,
+        choices=QR_STATUS_CHOICES,
+        default='pending'
+    )
+    qr_closed_at = models.DateTimeField(blank=True, null=True)
+    qr_closed_by = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='closed_qr_sessions'
+    )
+    qr_close_reason = models.CharField(max_length=255, blank=True, null=True)
     
     # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
@@ -146,6 +167,8 @@ class Lecture(models.Model):
         indexes = [
             models.Index(fields=['course', 'lecture_date']),
             models.Index(fields=['lecture_date']),
+            models.Index(fields=['qr_status']),
+            models.Index(fields=['qr_generated_at']),
         ]
 
     def __str__(self):
@@ -154,13 +177,21 @@ class Lecture(models.Model):
     @property
     def qr_is_valid(self):
         """Check if QR code is still valid"""
-        if not self.qr_generated_at:
+        if not self.qr_generated_at or self.qr_status == 'closed':
             return False
         from django.utils import timezone
         expiry_time = self.qr_generated_at + timezone.timedelta(
             minutes=self.qr_expiry_minutes
         )
         return timezone.now() <= expiry_time
+
+    @property
+    def computed_qr_status(self):
+        if self.qr_status == 'closed':
+            return 'closed'
+        if not self.qr_generated_at:
+            return 'pending'
+        return 'active' if self.qr_is_valid else 'expired'
 
     @property
     def attendance_count(self):

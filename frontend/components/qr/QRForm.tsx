@@ -2,31 +2,52 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
+import { Info, QrCode } from 'lucide-react';
 import { getMockData } from '@/utils/mockData';
+import { Course } from '@/types/index';
+import { courseService } from '@/services/courseService';
 import { QRCodeData } from './QRGenerator';
 import styles from './QRForm.module.css';
 
 interface QRFormProps {
   onGenerate: (data: QRCodeData) => void;
   isLoading: boolean;
+  initialCourseId?: string;
 }
 
-const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
-  const courses = getMockData.getCourses();
+const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading, initialCourseId }) => {
+  const [courses, setCourses] = useState<Course[]>(getMockData.getCourses());
   const today = new Date().toISOString().split('T')[0];
   const currentTime = new Date().toTimeString().slice(0, 5);
 
   const [formData, setFormData] = useState({
-    course_id: '',
+    course_id: initialCourseId || '',
     lecture_title: '',
     lecture_date: today,
     lecture_time: currentTime,
     venue: '',
     duration: '10',
+    allowed_radius: '20',
     lecture_number: ''
   });
+  const [validationError, setValidationError] = useState('');
+
+  useEffect(() => {
+    const loadCourses = async () => {
+      try {
+        const response = await courseService.getCourses();
+        if (Array.isArray(response) && response.length > 0) {
+          setCourses(response);
+        }
+      } catch {
+        setCourses(getMockData.getCourses());
+      }
+    };
+
+    loadCourses();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -36,13 +57,14 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
       ...prev,
       [name]: value
     }));
+    setValidationError('');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.course_id || !formData.lecture_title || !formData.venue) {
-      alert('Please fill all required fields');
+      setValidationError('Please fill all required fields before generating a QR code.');
       return;
     }
 
@@ -53,6 +75,7 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
       lecture_time: formData.lecture_time,
       venue: formData.venue,
       duration: parseInt(formData.duration),
+      allowed_radius: parseInt(formData.allowed_radius),
       lecture_number: formData.lecture_number ? parseInt(formData.lecture_number) : undefined
     };
 
@@ -64,6 +87,7 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
       <Card.Body>
         <h2 className={styles.title}>Lecture Details</h2>
         <p className={styles.subtitle}>Fill in the information to generate a QR code for attendance</p>
+        {validationError && <div className={styles.errorBox}>{validationError}</div>}
 
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-4">
@@ -155,6 +179,22 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
 
             <div className="col-md-6">
               <Form.Group>
+                <Form.Label>Allowed Radius (metres) *</Form.Label>
+                <Form.Control
+                  type="number"
+                  name="allowed_radius"
+                  value={formData.allowed_radius}
+                  onChange={handleChange}
+                  min="1"
+                  required
+                />
+              </Form.Group>
+            </div>
+          </div>
+
+          <div className="row g-3 mb-4">
+            <div className="col-md-6">
+              <Form.Group>
                 <Form.Label>Lecture Number</Form.Label>
                 <Form.Control
                   type="number"
@@ -169,9 +209,10 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
           </div>
 
           <div className={styles.infoBox}>
+            <Info size={18} aria-hidden="true" />
             <p>
-              <strong>ℹ️ Note:</strong> The QR code will expire after the specified validity period.
-              Students must scan within this timeframe to mark attendance.
+              <strong>Note:</strong> The QR code will expire after the specified validity period.
+              Your current location will be captured and students must be within the configured radius.
             </p>
           </div>
 
@@ -181,7 +222,7 @@ const QRForm: React.FC<QRFormProps> = ({ onGenerate, isLoading }) => {
             disabled={isLoading}
             size="lg"
           >
-            {isLoading ? 'Generating...' : '🔲 Generate QR Code'}
+            {isLoading ? 'Generating...' : <><QrCode size={19} aria-hidden="true" /> Generate QR Code</>}
           </Button>
         </Form>
       </Card.Body>

@@ -4,15 +4,17 @@
 
 import React, { useState } from 'react';
 import { Card, Table, Form, Pagination } from 'react-bootstrap';
+import { Download, Eye, Pencil, Printer } from 'lucide-react';
 import { AttendanceRecord } from '@/types/index';
 import styles from './AttendanceTable.module.css';
 
 interface AttendanceTableProps {
   records: AttendanceRecord[];
   onExport: () => void;
+  exportLabel?: string;
 }
 
-const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) => {
+const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport, exportLabel = 'Export Excel' }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -23,7 +25,7 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
       record.student_code.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const totalPages = Math.ceil(filteredRecords.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredRecords.length / itemsPerPage));
   const startIndex = (currentPage - 1) * itemsPerPage;
   const displayedRecords = filteredRecords.slice(startIndex, startIndex + itemsPerPage);
 
@@ -56,10 +58,10 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
           <h5 className={styles.tableTitle}>Student Attendance Records</h5>
           <div className={styles.tableActions}>
             <button className={`${styles.tableBtn} ${styles.export}`} onClick={onExport}>
-              📥 Export Excel
+              <Download size={16} aria-hidden="true" /> {exportLabel}
             </button>
             <button className={`${styles.tableBtn} ${styles.print}`}>
-              🖨️ Print
+              <Printer size={16} aria-hidden="true" /> Print
             </button>
           </div>
         </div>
@@ -67,7 +69,7 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
         <div className={styles.searchBar}>
           <Form.Control
             type="text"
-            placeholder="Search by student name or ID..."
+            placeholder="Search by student name or matric number..."
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
@@ -82,7 +84,7 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
             <thead>
               <tr>
                 <th>Student</th>
-                <th>Student ID</th>
+                <th>Matric Number</th>
                 <th>Present</th>
                 <th>Absent</th>
                 <th>Late</th>
@@ -92,8 +94,8 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
               </tr>
             </thead>
             <tbody>
-              {displayedRecords.map((record) => (
-                <tr key={record.student_id}>
+              {displayedRecords.length > 0 ? displayedRecords.map((record, index) => (
+                <tr key={`${record.student_code}-${record.percentage}-${index}`}>
                   <td>
                     <div className={styles.studentInfo}>
                       <div className={styles.studentAvatar}>
@@ -130,14 +132,20 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({ records, onExport }) 
                   </td>
                   <td>
                     <button className={styles.actionIcon} title="View Details">
-                      👁️
+                      <Eye size={17} aria-hidden="true" />
                     </button>
                     <button className={styles.actionIcon} title="Edit">
-                      ✏️
+                      <Pencil size={17} aria-hidden="true" />
                     </button>
                   </td>
                 </tr>
-              ))}
+              )) : (
+                <tr>
+                  <td colSpan={8} className="text-center py-4">
+                    No attendance records match the current filters.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </Table>
         </div>

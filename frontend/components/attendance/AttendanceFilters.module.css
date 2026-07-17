@@ -1,18 +1,16 @@
-/* components/attendance/AttendanceFilters.module.css */
-
 .card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: white;
-  margin-bottom: 30px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 26px;
 }
 
 .title {
+  color: var(--color-text);
   font-size: 18px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 850;
+  margin-bottom: 18px;
 }
 
 .buttonGroup {
@@ -22,11 +20,12 @@
 }
 
 .applyBtn {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  border: none;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  padding-inline: 18px;
 }
 
 .applyBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }

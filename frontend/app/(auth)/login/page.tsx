@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap'
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import { useNotification } from '@/hooks/useNotification';
+import { GraduationCap, School, ShieldCheck } from 'lucide-react';
 import styles from './LoginPage.module.css';
 
 const LoginPage: React.FC = () => {
@@ -34,11 +35,11 @@ const LoginPage: React.FC = () => {
     try {
       await login(formData.email, formData.password);
       showNotification('Login successful!', 'success');
-      const isLecturer = formData.email.toLowerCase().includes('lecturer')
-        || formData.email.toLowerCase().includes('dr.');
-      router.push(isLecturer ? '/dashboard/lecturer' : '/dashboard/student');
-    } catch (err: any) {
-      const errorMessage = err.message || 'Login failed. Please try again.';
+      const storedUser = localStorage.getItem('auth_user');
+      const role = storedUser ? JSON.parse(storedUser).role : 'student';
+      router.push(role === 'lecturer' ? '/dashboard/lecturer' : '/dashboard/student');
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : 'Login failed. Please try again.';
       setError(errorMessage);
       showNotification(errorMessage, 'error');
     } finally {
@@ -49,15 +50,15 @@ const LoginPage: React.FC = () => {
   // Demo credentials
   const setDemoStudent = () => {
     setFormData({
-      email: 'john.doe@university.edu',
-      password: 'password123',
+      email: 'ajohnson@futa.edu.ng',
+      password: 'student123',
     });
   };
 
   const setDemoLecturer = () => {
     setFormData({
-      email: 'dr.sarah@university.edu',
-      password: 'password123',
+      email: 'sarah.johnson@futa.edu.ng',
+      password: 'lecturer123',
     });
   };
 
@@ -65,13 +66,38 @@ const LoginPage: React.FC = () => {
     <div className={styles.loginContainer}>
       <Container>
         <Row className="justify-content-center align-items-center min-vh-100">
-          <Col md={6} lg={5}>
+          <Col lg={6} className="d-none d-lg-block">
+            <section className={styles.storyPanel}>
+              <div className={styles.storyBadge}>Federal University of Technology, Akure</div>
+              <h1>Fast attendance for busy lecture halls.</h1>
+              <p>
+                A clean shared workspace for students and lecturers to scan, generate,
+                verify, and review attendance without losing class time.
+              </p>
+              <div className={styles.storyStats}>
+                <div>
+                  <strong>QR</strong>
+                  <span>Session check-in</span>
+                </div>
+                <div>
+                  <strong>Live</strong>
+                  <span>Lecturer records</span>
+                </div>
+                <div>
+                  <strong>Both</strong>
+                  <span>Student and staff flows</span>
+                </div>
+              </div>
+            </section>
+          </Col>
+          <Col md={8} lg={5}>
             <Card className={styles.card}>
-              {/* Logo */}
               <div className={styles.logoSection}>
-                <div className={styles.logo}>QR</div>
-                <h1 className={styles.title}>QR Attendance System</h1>
-                <p className={styles.subtitle}>Sign in to your account</p>
+                <div className={styles.logo}>
+                  <ShieldCheck size={34} aria-hidden="true" />
+                </div>
+                <h1 className={styles.title}>Welcome Back</h1>
+                <p className={styles.subtitle}>Sign in to FUTA Attendance</p>
               </div>
 
               {/* Error Alert */}
@@ -138,7 +164,7 @@ const LoginPage: React.FC = () => {
                     onClick={setDemoStudent}
                     className={styles.demoBtn}
                   >
-                    👨‍🎓 Student Demo
+                    <GraduationCap size={16} aria-hidden="true" /> Student Demo
                   </Button>
                   <Button
                     variant="outline-secondary"
@@ -146,14 +172,14 @@ const LoginPage: React.FC = () => {
                     onClick={setDemoLecturer}
                     className={styles.demoBtn}
                   >
-                    👨‍🏫 Lecturer Demo
+                    <School size={16} aria-hidden="true" /> Lecturer Demo
                   </Button>
                 </div>
               </div>
 
               {/* Footer */}
               <div className={styles.footer}>
-                <p>Don't have an account? <a href="/register">Sign up here</a></p>
+                <p>Don&apos;t have an account? <a href="/register">Sign up here</a></p>
               </div>
             </Card>
           </Col>

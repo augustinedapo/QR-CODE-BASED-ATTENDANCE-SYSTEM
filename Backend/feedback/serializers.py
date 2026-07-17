@@ -19,16 +19,16 @@ class FeedbackQuestionSerializer(serializers.ModelSerializer):
         model = FeedbackQuestion
         fields = [
             'question_id', 'form', 'question_text', 'question_type',
-            'is_required', 'order', 'created_at'
+            'options', 'is_required', 'order'
         ]
-        read_only_fields = ['question_id', 'created_at']
+        read_only_fields = ['question_id']
 
 
 class FeedbackResponseSerializer(serializers.ModelSerializer):
     class Meta:
         model = FeedbackResponse
         fields = [
-            'response_id', 'form', 'question', 'student', 'response_text',
-            'rating_value', 'created_at'
+            'response_id', 'form', 'student', 'responses',
+            'rating', 'comments', 'submitted_at'
         ]
-        read_only_fields = ['response_id', 'created_at']
+        read_only_fields = ['response_id', 'student', 'submitted_at']

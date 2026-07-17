@@ -1,9 +1,7 @@
-/* components/attendance/AttendanceView.module.css */
-
 .page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  padding: 40px 0;
+  background: var(--page-gradient);
+  padding: 34px 0 48px;
 }
 
 .container {
@@ -11,40 +9,38 @@
 }
 
 .headerSection {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+  background: var(--color-surface);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 26px;
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-primary);
 }
 
 .title {
+  color: var(--color-text);
   font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 850;
+  margin-bottom: 8px;
 }
 
 .subtitle {
+  color: var(--color-text-muted);
   font-size: 16px;
-  color: #7f8c8d;
   margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
   .page {
-    padding: 20px 0;
+    padding: 20px 0 36px;
   }
 
   .headerSection {
-    padding: 20px;
+    padding: 22px;
   }
 
   .title {
     font-size: 22px;
-  }
-
-  .subtitle {
-    font-size: 14px;
   }
 }

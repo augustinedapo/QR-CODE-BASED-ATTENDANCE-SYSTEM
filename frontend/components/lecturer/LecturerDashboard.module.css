@@ -1,9 +1,7 @@
-/* components/lecturer/LecturerDashboard.module.css */
-
 .dashboard {
   min-height: 100vh;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  padding: 40px 0;
+  background: var(--page-gradient);
+  padding: 34px 0 48px;
 }
 
 .container {
@@ -11,68 +9,78 @@
 }
 
 .welcomeSection {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+  background: var(--color-surface);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 26px;
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-primary);
+  overflow: hidden;
 }
 
 .welcomeTitle {
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 9px;
 }
 
 .welcomeSubtitle {
+  color: var(--color-text-muted);
   font-size: 16px;
-  color: #7f8c8d;
   margin-bottom: 0;
 }
 
 .quickActionsSection {
-  margin: 30px 0;
+  margin: 28px 0;
 }
 
 .actionBtn {
   width: 100%;
-  padding: 20px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
+  min-height: 86px;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 750;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  text-decoration: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .actionBtn.primary {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  color: white;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .actionBtn.secondary {
-  background: white;
-  color: #2c3e50;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 .actionBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {
+  .dashboard {
+    padding: 20px 0 36px;
+  }
+
   .welcomeSection {
-    padding: 20px;
+    padding: 22px;
   }
 
   .welcomeTitle {
+    align-items: flex-start;
     font-size: 22px;
   }
 

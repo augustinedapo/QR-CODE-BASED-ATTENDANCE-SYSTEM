@@ -1,9 +1,7 @@
-/* components/qr/QRGenerator.module.css */
-
 .generator {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  padding: 40px 0;
+  background: var(--page-gradient);
+  padding: 34px 0 48px;
 }
 
 .container {
@@ -11,36 +9,39 @@
 }
 
 .headerSection {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  background: var(--color-surface);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-primary);
 }
 
 .title {
+  color: var(--color-text);
   font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 850;
+  margin-bottom: 8px;
 }
 
 .subtitle {
+  color: var(--color-text-muted);
   font-size: 16px;
-  color: #7f8c8d;
   margin-bottom: 0;
 }
 
 .placeholder {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: var(--color-surface);
+  border: 1px dashed color-mix(in srgb, var(--color-primary) 38%, var(--color-border));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  padding: 40px;
+  text-align: center;
 }
 
 .placeholderContent {
@@ -48,87 +49,104 @@
 }
 
 .icon {
-  font-size: 64px;
-  margin-bottom: 20px;
+  width: 86px;
+  height: 86px;
+  border-radius: 24px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
 }
 
 .placeholder h3 {
+  color: var(--color-text);
   font-size: 20px;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 .placeholder p {
-  color: #7f8c8d;
+  color: var(--color-text-muted);
   margin-bottom: 0;
 }
 
 .instructionsSection {
-  margin-top: 60px;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 34px;
+}
+
+.summarySection {
+  margin-top: 34px;
 }
 
 .instructionsSection h2 {
+  color: var(--color-text);
   font-size: 24px;
-  color: #2c3e50;
-  margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 850;
+  margin-bottom: 24px;
 }
 
 .instructionsList {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .instructionStep {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
+  background: var(--color-surface-solid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
 }
 
 .stepNumber {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  flex-shrink: 0;
+  margin-bottom: 14px;
 }
 
 .stepContent h4 {
-  font-size: 16px;
-  color: #2c3e50;
-  margin-bottom: 5px;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
 .stepContent p {
-  font-size: 14px;
-  color: #7f8c8d;
+  color: var(--color-text-muted);
+  font-size: 13px;
   margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .instructionsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
   .generator {
-    padding: 20px 0;
+    padding: 20px 0 36px;
   }
 
-  .instructionStep {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .headerSection,
+  .instructionsSection {
+    padding: 22px;
   }
 
-  .stepNumber {
-    order: -1;
+  .instructionsList {
+    grid-template-columns: 1fr;
   }
 }

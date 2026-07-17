@@ -14,8 +14,7 @@ class CustomUser(AbstractUser):
         ('admin', 'Administrator'),
     )
     
-    # Primary key - let Django handle this
-    # Don't override 'id', Django creates it automatically
+    user_id = models.AutoField(primary_key=True)
     
     email = models.EmailField(unique=True)
     role = models.CharField(

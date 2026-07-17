@@ -3,10 +3,10 @@
 'use client';
 
 import React from 'react';
-import { Container, Navbar, Nav, Dropdown, Button } from 'react-bootstrap';
+import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
 import { useAuth } from '@/hooks/useAuth';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { History, Home, LogOut, QrCode, Settings, Table2, UserRound } from 'lucide-react';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -16,6 +16,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title }) => {
   const { user, logout } = useAuth();
   const router = useRouter();
+  const dashboardPath = user?.role === 'lecturer' ? '/dashboard/lecturer' : '/dashboard/student';
 
   const handleLogout = () => {
     logout();
@@ -23,12 +24,12 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   };
 
   return (
-    <Navbar bg="white" expand="lg" sticky="top" className={styles.navbar}>
+    <Navbar expand="lg" sticky="top" className={styles.navbar}>
       <Container>
         <Navbar.Brand className={styles.brand}>
-          <div className={styles.logo}>QR</div>
+          <div className={styles.logo}>F</div>
           <div className={styles.brandText}>
-            <div className={styles.brandTitle}>QR Attendance System</div>
+            <div className={styles.brandTitle}>FUTA Attendance</div>
             <div className={styles.brandSubtitle}>{title || 'Dashboard'}</div>
           </div>
         </Navbar.Brand>
@@ -37,17 +38,20 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href={user?.role === 'lecturer' ? '/dashboard/lecturer' : '/dashboard/student'}>
-              <i className="bi bi-house-door"></i> Dashboard
+            <Nav.Link href={dashboardPath} className={styles.navLink}>
+              <Home size={17} aria-hidden="true" /> Dashboard
             </Nav.Link>
 
             {user?.role === 'lecturer' && (
               <>
-                <Nav.Link href="/qr-generator">
-                  <i className="bi bi-qr-code"></i> Generate QR
+                <Nav.Link href="/qr-generator" className={styles.navLink}>
+                  <QrCode size={17} aria-hidden="true" /> Generate QR
                 </Nav.Link>
-                <Nav.Link href="/attendance">
-                  <i className="bi bi-table"></i> Attendance
+                <Nav.Link href="/attendance" className={styles.navLink}>
+                  <Table2 size={17} aria-hidden="true" /> Attendance
+                </Nav.Link>
+                <Nav.Link href="/dashboard/lecturer/qr-sessions" className={styles.navLink}>
+                  <History size={17} aria-hidden="true" /> QR Sessions
                 </Nav.Link>
               </>
             )}
@@ -61,15 +65,15 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end">
-                <Dropdown.Item href="/profile">
-                  <i className="bi bi-person"></i> Profile
+                <Dropdown.Item href={`${dashboardPath}/profile`}>
+                  <UserRound size={16} aria-hidden="true" /> Profile
                 </Dropdown.Item>
-                <Dropdown.Item href="/settings">
-                  <i className="bi bi-gear"></i> Settings
+                <Dropdown.Item href={`${dashboardPath}/settings`}>
+                  <Settings size={16} aria-hidden="true" /> Settings
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>
-                  <i className="bi bi-box-arrow-right"></i> Logout
+                  <LogOut size={16} aria-hidden="true" /> Logout
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

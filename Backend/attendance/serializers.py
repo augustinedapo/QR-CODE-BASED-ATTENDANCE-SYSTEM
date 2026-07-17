@@ -1,7 +1,8 @@
 # attendance/serializers.py
 
 from rest_framework import serializers
-from attendance.models import Attendance, GeolocationLog, AttendanceReport
+from attendance.models import Attendance, AttendanceAttempt, GeolocationLog, AttendanceReport
+from courses.models import Lecture
 from courses.serializers import LectureSerializer
 from accounts.serializers import UserSerializer
 from django.utils import timezone # type: ignore
@@ -14,7 +15,11 @@ import hashlib
 class AttendanceSerializer(serializers.ModelSerializer):
     lecture = LectureSerializer(read_only=True)
     student = UserSerializer(read_only=True)
-    lecture_id = serializers.IntegerField(write_only=True)
+    lecture_id = serializers.PrimaryKeyRelatedField(
+        queryset=Lecture.objects.all(),
+        source='lecture',
+        write_only=True
+    )
     qr_code_data = serializers.CharField(write_only=True, required=False)
 
     class Meta:
@@ -23,7 +28,7 @@ class AttendanceSerializer(serializers.ModelSerializer):
             'attendance_id', 'lecture', 'lecture_id', 'student',
             'timestamp', 'latitude', 'longitude', 'location_verified',
             'distance_from_venue', 'ip_address', 'is_late', 'is_valid',
-            'qr_code_data', 'created_at'
+            'qr_code_data'
         ]
         read_only_fields = [
             'attendance_id', 'timestamp', 'is_late', 'is_valid'
@@ -81,6 +86,26 @@ class GeolocationLogSerializer(serializers.ModelSerializer):
             'ip_address', 'timestamp'
         ]
         read_only_fields = ['log_id', 'timestamp']
+
+
+class AttendanceAttemptSerializer(serializers.ModelSerializer):
+    lecture = LectureSerializer(read_only=True)
+    student = UserSerializer(read_only=True)
+    attendance_is_late = serializers.SerializerMethodField()
+
+    class Meta:
+        model = AttendanceAttempt
+        fields = [
+            'attempt_id', 'lecture', 'student', 'attendance',
+            'attendance_is_late',
+            'status', 'reason', 'message', 'latitude', 'longitude',
+            'accuracy', 'distance_from_venue', 'allowed_radius',
+            'ip_address', 'timestamp'
+        ]
+        read_only_fields = ['attempt_id', 'timestamp']
+
+    def get_attendance_is_late(self, obj):
+        return bool(obj.attendance and obj.attendance.is_late)
 
 
 class AttendanceReportSerializer(serializers.ModelSerializer):

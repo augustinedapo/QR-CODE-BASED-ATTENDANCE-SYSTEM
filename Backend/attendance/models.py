@@ -63,6 +63,74 @@ class Attendance(models.Model):
             self.save()
 
 
+class AttendanceAttempt(models.Model):
+    STATUS_CHOICES = (
+        ('success', 'Success'),
+        ('duplicate', 'Duplicate'),
+        ('failed', 'Failed'),
+    )
+
+    REASON_CHOICES = (
+        ('marked', 'Marked'),
+        ('already_marked', 'Already Marked'),
+        ('invalid_qr', 'Invalid QR'),
+        ('expired_qr', 'Expired QR'),
+        ('closed_qr', 'Closed QR'),
+        ('missing_location', 'Missing Location'),
+        ('invalid_location', 'Invalid Location'),
+        ('poor_accuracy', 'Poor Accuracy'),
+        ('outside_radius', 'Outside Radius'),
+        ('lecturer_location_missing', 'Lecturer Location Missing'),
+        ('unauthorized', 'Unauthorized'),
+    )
+
+    attempt_id = models.AutoField(primary_key=True)
+    lecture = models.ForeignKey(
+        Lecture,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='attendance_attempts'
+    )
+    student = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='attendance_attempts'
+    )
+    attendance = models.ForeignKey(
+        Attendance,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='attempts'
+    )
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    reason = models.CharField(max_length=40, choices=REASON_CHOICES)
+    message = models.CharField(max_length=255)
+    latitude = models.DecimalField(max_digits=10, decimal_places=8, blank=True, null=True)
+    longitude = models.DecimalField(max_digits=11, decimal_places=8, blank=True, null=True)
+    accuracy = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    distance_from_venue = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    allowed_radius = models.IntegerField(blank=True, null=True)
+    ip_address = models.GenericIPAddressField(blank=True, null=True)
+    user_agent = models.TextField(blank=True, null=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'attendance_attempts'
+        ordering = ['-timestamp']
+        indexes = [
+            models.Index(fields=['student', 'timestamp']),
+            models.Index(fields=['lecture', 'timestamp']),
+            models.Index(fields=['status']),
+            models.Index(fields=['reason']),
+        ]
+
+    def __str__(self):
+        lecture = self.lecture.lecture_id if self.lecture else 'unknown'
+        return f"{self.student.full_name} - Lecture {lecture} - {self.status}"
+
+
 class GeolocationLog(models.Model):
     VERIFICATION_STATUS_CHOICES = (
         ('verified', 'Verified'),

@@ -2,9 +2,7 @@
 
 import React, { createContext, useContext, ReactNode } from 'react';
 
-interface AttendanceContextType {
-  // Add attendance context properties here
-}
+type AttendanceContextType = Record<string, never>;
 
 const AttendanceContext = createContext<AttendanceContextType | undefined>(undefined);
 

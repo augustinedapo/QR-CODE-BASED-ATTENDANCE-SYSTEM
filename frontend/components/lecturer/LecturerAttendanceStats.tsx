@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
+import { AlertTriangle, BarChart3, BookOpen, UsersRound } from 'lucide-react';
 import { Course } from '@/types/index';
 import { getMockData } from '@/utils/mockData';
 import styles from './LecturerAttendanceStats.module.css';
@@ -39,25 +40,25 @@ const LecturerAttendanceStats: React.FC<LecturerAttendanceStatsProps> = ({ cours
 
   const statCards = [
     {
-      icon: '📚',
+      Icon: BookOpen,
       value: stats.totalCourses,
       label: 'Active Courses',
       bgColor: 'bg-blue'
     },
     {
-      icon: '👥',
+      Icon: UsersRound,
       value: stats.totalStudents,
       label: 'Total Students',
       bgColor: 'bg-green'
     },
     {
-      icon: '📊',
+      Icon: BarChart3,
       value: `${stats.averageAttendance}%`,
       label: 'Avg. Attendance',
       bgColor: 'bg-orange'
     },
     {
-      icon: '⚠️',
+      Icon: AlertTriangle,
       value: stats.atRiskStudents,
       label: 'Students At Risk',
       bgColor: 'bg-red'
@@ -70,7 +71,7 @@ const LecturerAttendanceStats: React.FC<LecturerAttendanceStatsProps> = ({ cours
         <Col key={index} md={6} lg={3}>
           <Card className={`${styles.statCard} ${styles[card.bgColor]}`}>
             <Card.Body>
-              <div className={styles.statIcon}>{card.icon}</div>
+              <div className={styles.statIcon}><card.Icon size={26} aria-hidden="true" /></div>
               <div className={styles.statValue}>{card.value}</div>
               <div className={styles.statLabel}>{card.label}</div>
             </Card.Body>

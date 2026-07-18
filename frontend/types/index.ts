@@ -45,6 +45,7 @@ export interface Lecture {
   lecture_id: number;
   course_id: number;
   course?: Course;
+  lecture_number?: number;
   lecture_date: string;
   start_time: string;
   end_time: string;

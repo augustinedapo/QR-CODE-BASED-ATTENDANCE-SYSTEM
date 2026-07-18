@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: qr-attendance-backend
+    env: python
+    rootDir: Backend
+    plan: free
+    buildCommand: "bash build.sh"
+    startCommand: "gunicorn qr_attendance_config.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: qr-attendance-db
+          property: connectionString
+
+databases:
+  - name: qr-attendance-db
+    plan: free

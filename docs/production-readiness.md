@@ -2,6 +2,8 @@
 
 This app now works well for local SQLite-backed development, but production should move the volatile pieces out of the app process.
 
+For the step-by-step student-project hosting guide, see `DEPLOYMENT.md` in the project root.
+
 ## Database
 
 - Use PostgreSQL instead of SQLite for production.

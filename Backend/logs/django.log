@@ -1353,3 +1353,8 @@ INFO 2026-07-17 12:59:53,564 basehttp 33888 26164 "GET /api/lectures/upcoming/ H
 INFO 2026-07-17 12:59:53,594 basehttp 33888 30056 "GET /api/enrollments/ HTTP/1.1" 200 7003
 INFO 2026-07-17 12:59:53,820 basehttp 33888 22292 "GET /api/lectures/upcoming/ HTTP/1.1" 200 7632
 INFO 2026-07-17 12:59:53,918 basehttp 33888 26164 "GET /api/enrollments/ HTTP/1.1" 200 7003
+WARNING 2026-07-17 13:56:30,742 log 5524 33132 Bad Request: /api/auth/register/
+WARNING 2026-07-17 13:56:34,330 log 5524 33132 Bad Request: /api/auth/register/
+WARNING 2026-07-17 13:56:47,876 log 5524 33132 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-17 13:57:00,073 log 5524 33132 Bad Request: /api/attendance/mark_attendance/
+WARNING 2026-07-17 13:57:04,101 log 5524 33132 Bad Request: /api/attendance/mark_attendance/

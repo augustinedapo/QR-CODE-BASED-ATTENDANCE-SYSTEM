@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## QR Attendance Frontend Deployment
+
+When deploying this project on Vercel, set the root directory to `frontend` and add this environment variable:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-backend-host.onrender.com/api
+```
+
+For local development, copy `.env.example` to `.env.local` and keep:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
+```
+
+See `../DEPLOYMENT.md` for the full frontend, backend, and PostgreSQL deployment guide.
